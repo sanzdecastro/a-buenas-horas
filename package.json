@@ -1,13 +1,17 @@
 {
-  "name": "dom-manipulation",
+  "name": "basics",
   "version": "1.0.0",
-  "author": "Germinal Camps for CodeOp",
+  "author": "Santi Sánchez",
   "license": "Proprietary",
   "scripts": {
-    "start": "npx tailwindcss -i ./input.css -o ./output.css --watch"
+    "start": "npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
+    "serve-json" : "json-server --watch db.json"
   },
   "devDependencies": {
     "prettier-plugin-tailwindcss": "^0.1.7",
     "tailwindcss": "^3.0.19"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
   }
 }
