@@ -1,365 +1,228 @@
 {
   "tasks": [
     {
-      "id": "1",
-      "title": "a title",
-      "description": "a description"
-    },
-    {
-      "id": "2",
-      "title": "another title",
-      "description": "another description"
-    },
-    {
-      "id": "f317",
-      "title": "asda",
-      "description": "aaaaa"
-    },
-    {
-      "id": "7ca3",
-      "title": "czxcz",
-      "description": "zczcz"
-    },
-    {
-      "id": "f100",
-      "title": "nueva tarea",
-      "description": "description"
-    },
-    {
-      "id": "edc7",
-      "title": "ASDASD",
-      "description": "DSADSAD",
-      "imageURL": "DADSADAD"
-    },
-    {
-      "id": "3afe",
+      "id": "45c4",
       "title": "",
       "description": "",
-      "imageURL": ""
+      "categories": [
+        "category 1",
+        "category 2",
+        "category ",
+        "new ",
+        "hello ",
+        "gdfgd ",
+        "dfg ",
+        "qwerty ",
+        "dada ",
+        "qwe ",
+        "catcat ",
+        "hola "
+      ]
     },
     {
-      "id": "551a",
+      "id": "2a6b",
+      "title": "Nueva tarea",
+      "description": "",
+      "categories": [
+        "category 1",
+        "category 2",
+        "category ",
+        "new ",
+        "hello ",
+        "gdfgd ",
+        "dfg ",
+        "qwerty ",
+        "dada ",
+        "qwe ",
+        "catcat ",
+        "hola ",
+        "casa "
+      ]
+    },
+    {
+      "id": "f637",
+      "title": "Tarea 3",
+      "description": "",
+      "imageURL": "Descripción",
+      "categories": [
+        "category 1",
+        "category 2",
+        "category ",
+        "new ",
+        "hello ",
+        "gdfgd ",
+        "dfg ",
+        "qwerty ",
+        "dada ",
+        "qwe ",
+        "catcat ",
+        "hola ",
+        "casa ",
+        "category4 "
+      ]
+    },
+    {
+      "id": "7c2c",
       "title": "",
       "description": "",
-      "imageURL": ""
+      "categories": [
+        "category 1",
+        "category 2",
+        "category ",
+        "new ",
+        "hello ",
+        "gdfgd ",
+        "dfg ",
+        "qwerty ",
+        "dada ",
+        "qwe ",
+        "catcat ",
+        "hola ",
+        "casa ",
+        "category4 "
+      ]
     },
     {
-      "id": "185b",
+      "id": "1c16",
+      "title": "dsada",
+      "description": "",
+      "date": "2024-04-22",
+      "categories": [
+        "category 1",
+        "category 2",
+        "category ",
+        "new ",
+        "hello ",
+        "gdfgd ",
+        "dfg ",
+        "qwerty ",
+        "dada ",
+        "qwe ",
+        "catcat ",
+        "hola ",
+        "casa ",
+        "category4 "
+      ]
+    },
+    {
+      "id": "398d",
+      "title": "test",
+      "description": "",
+      "date": "2024-04-26",
+      "time": "21:51",
+      "categories": [
+        "category 1",
+        "category 2",
+        "category ",
+        "new ",
+        "hello ",
+        "gdfgd ",
+        "dfg ",
+        "qwerty ",
+        "dada ",
+        "qwe ",
+        "catcat ",
+        "hola ",
+        "casa ",
+        "category4 "
+      ]
+    },
+    {
+      "id": "2255",
+      "title": "tareaaa",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [
+        "hello ",
+        "qwerty ",
+        "category4 ",
+        "vxcvxc "
+      ]
+    },
+    {
+      "id": "d877",
       "title": "",
       "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "3b4a",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "69e7",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "faaa",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "14c0",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "081c",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "70b1",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "33d0",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "eda9",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "54ee",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "fa02",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "f4bb",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "d692",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "198f",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "faa3",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "6dc9",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "41f3",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "e096",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "3991",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "e44c",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "e391",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "a8ba",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "2bfc",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "47c2",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "cc49",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "3304",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "dbb6",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "dc35",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "04bd",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "9383",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "262e",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "92a8",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "d6c1",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "0f8d",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "f817",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "5009",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "5bd5",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "e655",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "2173",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "ab13",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "19f4",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "ef91",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "6af1",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "f36c",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "3394",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "db7b",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "409c",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "8583",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "af2d",
-      "title": "",
-      "description": "",
-      "imageURL": ""
-    },
-    {
-      "id": "5a88",
-      "title": "das",
-      "description": "asd",
-      "imageURL": "d"
-    },
-    {
-      "id": "f981",
-      "title": "s",
-      "description": "s",
-      "imageURL": "s"
+      "date": "",
+      "time": "",
+      "categories": [
+        "category 1",
+        "gdfgd ",
+        "catcat ",
+        "hola ",
+        "casa ",
+        "vxcvxc ",
+        "dasdas "
+      ]
     }
   ],
   "categories": [
     {
       "id": "1",
-      "text": "a comment about post 1",
+      "title": "category 1",
       "postId": "1"
     },
     {
       "id": "2",
-      "text": "another comment about post 1",
+      "title": "category 2",
       "postId": "1"
+    },
+    {
+      "id": "e266",
+      "title": "category "
+    },
+    {
+      "id": "d3f6",
+      "title": "new "
+    },
+    {
+      "id": "1995",
+      "title": "hello "
+    },
+    {
+      "id": "30b6",
+      "title": "gdfgd "
+    },
+    {
+      "id": "ed26",
+      "title": "dfg "
+    },
+    {
+      "id": "4e3f",
+      "title": "qwerty "
+    },
+    {
+      "id": "ae62",
+      "title": "dada "
+    },
+    {
+      "id": "3fdb",
+      "title": "qwe "
+    },
+    {
+      "id": "4763",
+      "title": "catcat "
+    },
+    {
+      "id": "3fdd",
+      "title": "hola "
+    },
+    {
+      "id": "f674",
+      "title": "casa "
+    },
+    {
+      "id": "c742",
+      "title": "category4 "
+    },
+    {
+      "id": "5572",
+      "title": "vxcvxc "
+    },
+    {
+      "id": "134d",
+      "title": "dasdas "
     }
   ]
 }

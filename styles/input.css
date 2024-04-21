@@ -4,5 +4,14 @@
 
 body {
     @apply
-    bg-slate-50;
+    bg-greenLight;
+}
+
+.task {
+    @apply
+    m-2
+    p-2
+    border
+    border-black
+    border-solid;
 }

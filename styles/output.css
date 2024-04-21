@@ -556,5 +556,14 @@ video {
 
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  background-color: rgb(225 224 206 / var(--tw-bg-opacity));
+}
+
+.task {
+  margin: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding: 0.5rem;
 }
