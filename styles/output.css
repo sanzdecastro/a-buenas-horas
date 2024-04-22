@@ -554,9 +554,62 @@ video {
   --tw-contain-style:  ;
 }
 
+@font-face {
+  font-family: 'GeneralSans-Regular';
+
+  src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('../fonts/GeneralSans-Regular.woff') format('woff'),
+         url('../fonts/GeneralSans-Regular.ttf') format('truetype');
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans-Semibold';
+
+  src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
+         url('../fonts/GeneralSans-Semibold.woff') format('woff'),
+         url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
+
+  font-weight: 600;
+
+  font-display: swap;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeneralSans-Bold';
+
+  src: url('../assets/fonts/GeneralSans-Bold.woff2') format('woff2'),
+         url('../assets/fonts/GeneralSans-Bold.woff') format('woff'),
+         url('../assets/fonts/GeneralSans-Bold.ttf') format('truetype');
+
+  font-weight: 700;
+
+  font-display: swap;
+
+  font-style: normal;
+}
+
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(225 224 206 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 14vw;
+  line-height: 14vw;
+  letter-spacing: .01vw;
+  font-family: 'GeneralSans-Bold';
 }
 
 .task {

@@ -8,7 +8,7 @@ export function createLabelCategory() {
     inputAddCategories.onkeyup = function(e) {
         if (e.key == " " ||
             e.code == "Space" ||      
-            e.keyCode == 32
+            e.keyCode == 13
         ) {
             // Consigo el valor del input de categories
             let tagValue = inputAddCategories.value;

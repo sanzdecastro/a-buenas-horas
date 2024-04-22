@@ -17,6 +17,7 @@
             <p></p>
             <button class="button task-done">Tarea realizada</button>
             <button class="button delete">Eliminar tarea</button>
+            <button class="button edit">Editar tarea</button>
         </div>
     </section>
     <section class="tasks-container">
@@ -41,8 +42,38 @@
             <div class="categories-container categories-added"></div>
             <input id="newTag">
         </div>
-        
+        <label for="priority">Prioridad</label>
+        <select id="priority" name="priority">
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+        </select>
         <button id="submitTask" class="button button--primary">Submit</button>
+    </form>
+
+    <form class="edit">
+        <label for="title">Título</label>
+        <input id="title" type="text">
+        <label for="description">Descripción</label>
+        <input id="description" type="text">
+        <!-- <label for="image">Image URL</label>
+        <input id="image" type="text"> -->
+        <label for="date">Fecha</label>
+        <input id="date" type="date">
+        <label for="time">Hora</label>
+        <input id="time" type="time">
+        <label for="categories">Create a category</label>
+        <div class="categories">
+            <div class="categories-container categories-added"></div>
+            <input id="newTag">
+        </div>
+        <label for="priority">Prioridad</label>
+        <select id="priority" name="priority">
+            <option value="Baja">Baja</option>
+            <option value="Media">Media</option>
+            <option value="Alta">Alta</option>
+        </select>
+        <button id="submitEditTask" class="button button--primary">Save edition</button>
     </form>
     <script src="./js/main.js" type="module"></script>
 </body>

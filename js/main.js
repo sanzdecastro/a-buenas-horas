@@ -67,6 +67,8 @@ function postCategory(newCategory) {
 }
 
 
+
+
 // Submit nueva tarea
 const buttonSubmit = document.getElementById("submitTask");
 buttonSubmit.addEventListener("click", submitTask);
@@ -77,6 +79,7 @@ function submitTask() {
     const description = document.querySelector('#description').value;
     const date = document.querySelector('#date').value;
     const time = document.querySelector('#time').value;
+    const priority = document.querySelector('#priority').value;
     // Reunir todas las categorías para asociarlas a la task
     let divsCategories = document.querySelectorAll(".categories-added .tag.selected")
     let categories = [];
@@ -103,26 +106,19 @@ function submitTask() {
       description: description,
       date: date,
       time: time,
-      categories : categories
+      categories : categories,
+      priority: priority
     };
 
     postData(newTask);
 }
 
+
 createLabelCategory();
 selectCategories();
 
 
-function openTask(idTask) {
-    let taskDetailTitle = document.querySelector(".task-detail h2");
-
-    for (let task of tasks){
-        console.log(task.title);
-    }
-}
 
 
 
-
- 
 
