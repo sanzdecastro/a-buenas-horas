@@ -58,6 +58,7 @@ header {
     
     bg-gradient-to-b
     from-white
+    from-60%
     via-white
     to-transparent;
 }
@@ -78,11 +79,62 @@ header .highlights {
 }
 
 header .highlights .highlight {
+    background-position-y: 8vw;
     @apply
+    opacity-80
+    bg-blend-multiply
+    bg-no-repeat
     aspect-vertical
     rounded-lg
-    p-4
-    bg-purple-100;
+    px-4
+    py-3
+    bg-purple-100
+    flex
+    flex-col
+    justify-between;
+}
+header .highlights .highlight.active {
+    @apply
+    opacity-100
+}
+header .highlights .highlight h4 {
+    font-size: 3.5vw;;
+}
+
+header .highlights .highlight div {
+    font-size: 9vw;
+    line-height: 8vw;
+    font-family: 'GeneralSans-Bold';
+    @apply
+    text-right;
+}
+
+header .highlights .highlight.counTasks {
+    background-image: url(../assets/images/folder.png);
+    @apply
+    text-purple-800
+    bg-purple-200;
+}
+
+header .highlights .highlight.counTasksLow {
+    background-image: url(../assets/images/flag.png);
+    @apply
+    text-green-800
+    bg-green-200;
+}
+
+header .highlights .highlight.counTasksMedium {
+    background-image: url(../assets/images/rayo.png);
+    @apply
+    text-orange-800
+    bg-orange-200;
+}
+
+header .highlights .highlight.counTasksHigh {
+    background-image: url(../assets/images/fuego.png);
+    @apply
+    text-red-800
+    bg-red-200;
 }
 
 h1 {
@@ -146,6 +198,7 @@ button.add {
 
 .task {
     @apply
+    hidden
     bg-white
     m-2
     mb-4
@@ -159,6 +212,10 @@ button.add {
     shadow-indigo-100;
 }
 
+.task.visible {
+    @apply
+    block;
+}
 
 .task .header-task {
     @apply

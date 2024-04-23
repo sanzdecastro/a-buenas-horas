@@ -9,9 +9,9 @@ const tasksJSON = 'http://localhost:3000/tasks';
 // URL de los datos de tareas (creado con json server)
 const categoriesJSON = 'http://localhost:3000/categories';
 
-
-getDataTasks(tasksJSON);
 getDataCategories(categoriesJSON);
+getDataTasks(tasksJSON);
+
 
 
 
@@ -72,6 +72,7 @@ const buttonSubmit = document.getElementById("submitTask");
 buttonSubmit.addEventListener("click", submitTask);
 
 function submitTask() {
+  
     // Obtener los valores del formulario
     const title = document.querySelector('#title').value;
     const description = document.querySelector('#description').value;

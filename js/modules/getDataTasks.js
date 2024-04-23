@@ -28,6 +28,36 @@ export async function getDataTasks(tasksJSON) {
         let highTasks = tasks.filter(task => task.priority === "Alta").length;
         numHighTasksCont.innerHTML += highTasks;
 
+
+        // Mostrar según tipo de prioridad
+        const seeTasksButtons = document.querySelectorAll(".highlight");
+        
+        seeTasksButtons.forEach(function(seeTaskButton){
+          let seeTaskButtonType = seeTaskButton.getAttribute("data-type");
+          seeTaskButton.addEventListener("click", function(){
+            seeTasks(seeTaskButtonType, seeTaskButton)
+          });
+        })
+
+        function seeTasks(seeTaskButtonType, seeTaskButton) {
+          seeTaskButton.classList.remove("active")
+          seeTaskButton.classList.add("active")
+          let tasksActive = seeTaskButtonType;
+          let tasks = document.querySelectorAll(".tasks-container .task");
+          tasks.forEach(task => {
+            task.classList.remove("visible");
+            if(tasksActive === "Alta" && task.classList.contains("Alta")) {
+              task.classList.toggle("visible");
+            } else if (tasksActive === "Media" && task.classList.contains("Media")) {
+              task.classList.toggle("visible");
+            } else if (tasksActive === "Baja" && task.classList.contains("Baja")) {
+              task.classList.toggle("visible");
+            } else if (tasksActive === "Todos") {
+              task.classList.add("visible");
+            }
+          })
+        }
+
         // Recuento de tareas prioridad media
         let numMediumTasksCont = document.querySelector(".highlights .numTasksMedium")
         let mediumTasks = tasks.filter(task => task.priority === "Media").length;
@@ -37,7 +67,7 @@ export async function getDataTasks(tasksJSON) {
         let numLowTasksCont = document.querySelector(".highlights .numTasksLow")
         let lowTasks = tasks.filter(task => task.priority === "Baja").length;
         numLowTasksCont.innerHTML += lowTasks;
-        
+
         
         for (let task of tasks) {
             let idTask = task.id;
@@ -57,7 +87,7 @@ export async function getDataTasks(tasksJSON) {
             
 
             tasksContainer.innerHTML += `
-            <div class="task" data-id="${idTask}">
+            <div class="task visible ${priority}" data-id="${idTask}">
               <div class="header-task">
                 <h2>${titleTask}</h2>
                 <div class="priority ${priority.toLowerCase()}">${priority}</div>
