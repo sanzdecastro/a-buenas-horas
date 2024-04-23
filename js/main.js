@@ -67,8 +67,6 @@ function postCategory(newCategory) {
 }
 
 
-
-
 // Submit nueva tarea
 const buttonSubmit = document.getElementById("submitTask");
 buttonSubmit.addEventListener("click", submitTask);
@@ -113,11 +111,28 @@ function submitTask() {
     postData(newTask);
 }
 
-
 createLabelCategory();
 selectCategories();
 
+addTaskButton();
+function addTaskButton() {
+    document.querySelector(".add").addEventListener("click", function(){
+        let card = document.querySelector("form")
 
+        card.classList.toggle("visible");
+    })
+}
+
+// closeCard();
+// function closeCard() {
+
+//     document.querySelector("body").addEventListener("click", function(){
+//         let card = document.querySelector("form")
+
+//         card.classList.toggle("visible");
+//     })
+    
+// }
 
 
 

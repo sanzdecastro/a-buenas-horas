@@ -1,16 +1,109 @@
 {
   "tasks": [
     {
-      "id": "d669",
-      "title": "Tarea 3 edited",
+      "id": "b987",
+      "title": "2",
+      "description": "lorem",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "a29a",
+      "title": "5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+      "date": "2024-04-25",
+      "time": "21:02",
+      "categories": [],
+      "priority": "Media"
+    },
+    {
+      "id": "3cc7",
+      "title": "Entrevista Frontend edited h",
+      "description": "",
+      "date": "2024-04-25",
+      "time": "",
+      "categories": [],
+      "priority": "Alta"
+    },
+    {
+      "id": "0882",
+      "title": "name tarea",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "2cb3",
+      "title": "Title",
+      "description": "Lorem ipsum",
+      "date": "2024-04-24",
+      "time": "23:49",
+      "categories": [
+        "Sin categoría"
+      ],
+      "priority": "Media"
+    },
+    {
+      "id": "f921",
+      "title": "tarea",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "f096",
+      "title": "NUEVA e",
+      "description": "Lorem ipsum",
+      "date": "2024-04-26",
+      "time": "14:56",
+      "categories": [],
+      "priority": "Alta"
+    },
+    {
+      "id": "3750",
+      "title": "nuevaaa",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "3aeb",
+      "title": "Nueva",
       "description": "Lorem ipsum",
       "date": "2024-04-25",
-      "time": "18:05",
+      "time": "18:54",
       "categories": [
-        "category 2",
-        "new "
+        "Sin categoría",
+        "Otra ",
+        "Nueva "
       ],
-      "priority": "Alta"
+      "priority": "Baja"
+    },
+    {
+      "id": "53c4",
+      "title": "asdfg",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "8340",
+      "title": "New",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
     }
   ],
   "categories": [
@@ -23,6 +116,26 @@
       "id": "2",
       "title": "Categoría de prueba",
       "postId": "1"
+    },
+    {
+      "id": "ebae",
+      "title": "Otra "
+    },
+    {
+      "id": "5693",
+      "title": "Frontend "
+    },
+    {
+      "id": "833f",
+      "title": "Compras "
+    },
+    {
+      "id": "3f12",
+      "title": "Hola "
+    },
+    {
+      "id": "7a13",
+      "title": "Nueva "
     }
   ]
 }

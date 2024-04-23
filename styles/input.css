@@ -4,9 +4,9 @@
 
 @font-face {
     font-family: 'GeneralSans-Regular';
-    src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
-         url('../fonts/GeneralSans-Regular.woff') format('woff'),
-         url('../fonts/GeneralSans-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('../assets/fonts/GeneralSans-Regular.woff') format('woff'),
+         url('../assets/fonts/GeneralSans-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -14,9 +14,9 @@
 
   @font-face {
     font-family: 'GeneralSans-Semibold';
-    src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
-         url('../fonts/GeneralSans-Semibold.woff') format('woff'),
-         url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
+    src: url('../assets/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+         url('../assets/fonts/GeneralSans-Semibold.woff') format('woff'),
+         url('../assets/fonts/GeneralSans-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-display: swap;
     font-style: normal;
@@ -31,11 +31,58 @@
     font-display: swap;
     font-style: normal;
   }
+
+  html {
+    height: 100dvh;
+  }
+
+
 body {
+    height: 100dvh;
+    background-color: whitesmoke;
     @apply
-    px-3
-    py-2
-    bg-white;
+    top-0
+    fixed
+    left-0;
+}
+
+* {
+    font-family: 'GeneralSans-Regular';
+}
+
+header {
+    height: 50dvh;
+    @apply
+    z-10
+    relative
+    
+    bg-gradient-to-b
+    from-white
+    via-white
+    to-transparent;
+}
+header h1 {
+    @apply
+    p-2;
+}
+
+header .highlights {
+    @apply
+    p-2
+    overflow-y-scroll
+    aspect-dosAuno
+    mt-4
+    flex
+    flex-row
+    gap-2;
+}
+
+header .highlights .highlight {
+    @apply
+    aspect-vertical
+    rounded-lg
+    p-4
+    bg-purple-100;
 }
 
 h1 {
@@ -43,13 +90,321 @@ h1 {
     line-height: 14vw;
     letter-spacing: .01vw;;
     font-family: 'GeneralSans-Bold';
+    @apply
+    bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-violet-400 via-rose-100 to-zinc-800 bg-clip-text text-transparent
+}
+
+h2 {
+    font-size: 6vw;
+    line-height: 6vw;
+    letter-spacing: .1vw;;
+    font-family: 'GeneralSans-Semibold';
+}
+
+h3 {
+    font-size: 6vw;
+    line-height: 6vw;
+    letter-spacing: .1vw;;
+    font-family: 'GeneralSans-Semibold';
+}
+
+.nav {
+    height: 30vw;
+    @apply
+    w-full
+    fixed
+    bottom-0
+   bg-gradient-to-t
+   from-white
+   to-transparent
+    m-auto
+    p-2
+    flex
+    justify-center
+    items-end;
+}
+
+button.add {
+    @apply
+    bg-purple-400
+    text-purple-950
+    w-full;
+}
+
+
+.tasks-container {
+    height: 100dvh;
+    padding-top: 50dvh;
+    @apply
+    fixed
+    w-full
+    bottom-0
+    overflow-hidden
+    overflow-y-scroll
+    pb-20;
 }
 
 .task {
     @apply
+    bg-white
     m-2
+    mb-4
+    p-4
+    pt-6
+    rounded-md
+    shadow-md
+    border
+    border-solid
+    border-indigo-50
+    shadow-indigo-100;
+}
+
+
+.task .header-task {
+    @apply
+    mb-0;
+}
+
+.task .header-task h2 {
+    @apply
+    mb-2;
+}
+
+.task .date-time {
+    @apply
+    text-gray-400
+    mb-2;
+}
+
+.task .categories {
+    @apply
+    flex 
+    flex-wrap;
+}
+
+.header-task {
+    @apply
+    mb-2
+    gap-4
+    flex
+    items-start
+    justify-between;
+}
+
+.priority {
+    font-size: 3vw;
+    line-height: 3vw;
+    @apply
+    flex
+    justify-center
+    items-center
+    py-1
+    px-3
+    bg-gray-100
+    rounded-full;
+}
+
+.priority.baja {
+    @apply
+    bg-green-200
+    text-green-800;
+}
+
+.priority.media {
+    @apply
+    bg-orange-200
+    text-orange-800;
+}
+
+.priority.alta {
+    @apply
+    bg-red-200
+    text-red-500;
+}
+
+.task-detail .date-time {
+    @apply
+    mb-2
+    flex
+    gap-4
+    text-gray-400;
+}
+
+.task-detail {
+    width: 100vw;
+    height: 100dvh;
+    @apply
+    p-6
+    pointer-events-none
+    backdrop-blur-md
+    z-10
+    top-0
+    left-0
+    transition-all
+    ease-in-out
+    duration-700
+    opacity-0
+    absolute
+    flex
+    justify-center
+    items-center;
+}
+
+.task-detail .section-wrapper {
+    @apply
+    w-full
+    translate-y-6
+    bg-white
+    p-4
+    shadow-md
+    rounded-md;
+}
+
+.task-detail.opened {
+    @apply
+    pointer-events-auto
+    opacity-100
+    translate-x-0
+}
+
+.task-detail .actions-task {
+    @apply
+    border-t
+    border-solid
+    border-gray-200
+    mt-4
+    pt-4
+    flex
+    gap-2
+    justify-end;
+}
+
+.task-detail p {
+    @apply
+    mb-2;
+}
+
+form {
+    top: 100dvh;
+    @apply
+    p-3
+    duration-700
+    ease-in-out
+    origin-top
+    transition-transform
+    translate-y-0
+    bg-white
+    w-full
+    absolute
+    left-0
+    border
+    border-solid
+    border-blue-100
+    rounded-2xl;
+}
+
+
+.form_section {
+    @apply
+   
+    bg-white
+    flex
+    flex-col
+    py-2
+    mb-2
+    rounded-2xl;
+}
+
+.form_section.horizontal {
+    @apply
+    gap-2
+    flex-row;
+}
+
+.form_section.horizontal div{
+    @apply
+    w-1/2;
+}
+
+form.visible, form.editing {
+    @apply
+    z-10
+    -translate-y-full;
+}
+
+label {
+    font-size: 3vw;
+    line-height: 3vw;
+    @apply
+    pb-2;
+}
+
+input {
+    @apply
+    w-full
     p-2
     border
-    border-black
-    border-solid;
+    border-solid
+    border-gray-200
+    rounded-xl;
+}
+
+.categories-container {
+    @apply
+    flex
+    flex-wrap;
+}
+
+.tag {
+    font-size: 3vw;
+    line-height: 3vw;
+    @apply
+    w-fit
+    bg-gray-200
+    px-2
+    py-1
+    rounded-2xl
+    mr-2
+    mb-2;
+}
+
+.tag.selected {
+    @apply
+    bg-blue-400
+    text-blue-100;
+}
+
+button {
+    font-family: 'GeneralSans-Semibold';
+    font-weight: 100;
+    font-size: 5vw;
+    line-height: 5vw;
+    letter-spacing: .1vw;
+    @apply
+    py-3
+    px-5
+    bg-black
+    text-white
+    rounded-full;
+}
+
+.button--secondary {
+    font-family: 'GeneralSans-Regular';
+    font-size: 4vw;
+    line-height: 4vw;
+    @apply
+    py-2
+    px-5;
+}
+
+button.delete {
+    @apply
+    bg-red-100
+    text-red-600;
+}
+
+button.edit {
+    @apply
+    bg-blue-100
+    text-blue-600;
 }

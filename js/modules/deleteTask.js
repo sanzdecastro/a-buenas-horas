@@ -1,9 +1,9 @@
 // Eiminar entrada
 
-export async function deleteTask(idTask) {
+export async function deleteTask(id) {
     
     try {
-       const url = `http://localhost:3000/tasks/${idTask}`; // Asegúrate de reemplazar con la URL correcta
+       const url = `http://localhost:3000/tasks/${id}`; // Asegúrate de reemplazar con la URL correcta
        const respuesta = await fetch(url, {
          method: 'DELETE',
          headers: {
