@@ -597,15 +597,26 @@ video {
 }
 
 html {
+  width: 100dvw;
   height: 100dvh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-body {
+.bodyView {
   height: 100dvh;
   background-color: whitesmoke;
-  position: fixed;
+  max-width: 500px;
+  max-height: 900px;
+  position: relative;
   top: 0px;
   left: 0px;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 * {
@@ -613,17 +624,8 @@ body {
 }
 
 header {
-  height: 50dvh;
   position: relative;
   z-index: 10;
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  --tw-gradient-from: #fff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-from-position: 60%;
-  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to);
-  --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
 header h1 {
@@ -636,7 +638,8 @@ header .highlights {
   aspect-ratio: 2/.8;
   flex-direction: row;
   gap: 0.5rem;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
   padding: 0.5rem;
 }
 
@@ -644,6 +647,7 @@ header .highlights .highlight {
   background-position-y: 8vw;
   display: flex;
   aspect-ratio: 12/14;
+  cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 0.5rem;
@@ -659,21 +663,26 @@ header .highlights .highlight {
 }
 
 header .highlights .highlight.active {
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(216 180 254 / var(--tw-border-opacity));
   opacity: 1;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #d8b4fe;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 header .highlights .highlight h4 {
-  font-size: 3.5vw;
+  font-size: clamp(10px, 3.5vw, 20px);
+  line-height: clamp(10px, 3.5vw, 20px);
 }
 
 header .highlights .highlight div {
   font-size: 9vw;
   line-height: 8vw;
+  font-size: clamp(20px, 9vw, 40px);
+  line-height: clamp(20px, 8vw, 40px);
   font-family: 'GeneralSans-Bold';
   text-align: right;
 }
@@ -688,37 +697,37 @@ header .highlights .highlight.counTasks {
 
 header .highlights .highlight.counTasksLow {
   background-image: url(../assets/images/flag.png);
+  --tw-border-opacity: 1;
+  border-color: rgb(134 239 172 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
-  --tw-shadow-color: #86efac;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 header .highlights .highlight.counTasksMedium {
   background-image: url(../assets/images/rayo.png);
+  --tw-border-opacity: 1;
+  border-color: rgb(253 186 116 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(254 215 170 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(154 52 18 / var(--tw-text-opacity));
-  --tw-shadow-color: #fdba74;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 header .highlights .highlight.counTasksHigh {
   background-image: url(../assets/images/fuego.png);
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
-  --tw-shadow-color: #fca5a5;
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 h1 {
-  font-size: 14vw;
-  line-height: 14vw;
+  font-size: clamp(50px, 14vw, 70px);
+  line-height: clamp(50px, 14vw, 70px);
   letter-spacing: .01vw;
   font-family: 'GeneralSans-Bold';
   background-image: conic-gradient(at bottom left, var(--tw-gradient-stops));
@@ -734,22 +743,22 @@ h1 {
 }
 
 h2 {
-  font-size: 6vw;
-  line-height: 6vw;
-  letter-spacing: .1vw;
+  font-size: clamp(20px, 6vw, 30px);
+  line-height: clamp(20px, 6.5vw, 30px);
+  letter-spacing: -.1vw;
   font-family: 'GeneralSans-Semibold';
 }
 
 h3 {
-  font-size: 6vw;
-  line-height: 6vw;
+  font-size: clamp(20px, 6vw, 30px);
+  line-height: clamp(20px, 6.5vw, 30px);
   letter-spacing: .1vw;
   font-family: 'GeneralSans-Semibold';
 }
 
 .nav {
-  height: 30vw;
-  position: fixed;
+  height: 100px;
+  position: absolute;
   bottom: 0px;
   margin: auto;
   display: flex;
@@ -774,8 +783,7 @@ button.add {
 
 .tasks-container {
   height: 100dvh;
-  padding-top: 50dvh;
-  position: fixed;
+  position: relative;
   bottom: 0px;
   width: 100%;
   overflow: hidden;
@@ -787,6 +795,7 @@ button.add {
   margin: 0.5rem;
   margin-bottom: 1rem;
   display: none;
+  cursor: pointer;
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
@@ -816,6 +825,10 @@ button.add {
   gap: 0.5rem;
 }
 
+.task .header-task {
+  align-items: flex-start;
+}
+
 .task .header-task h2 {
   margin-bottom: 0.5rem;
 }
@@ -840,8 +853,8 @@ button.add {
 }
 
 .priority {
-  font-size: 3vw;
-  line-height: 3vw;
+  font-size: clamp(10px, 3vw, 15px);
+  line-height: clamp(10px, 3vw, 15px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -883,7 +896,7 @@ button.add {
 }
 
 .task-detail {
-  width: 100vw;
+  width: 100%;
   height: 100dvh;
   pointer-events: none;
   position: absolute;
@@ -943,6 +956,7 @@ form {
   top: 100dvh;
   position: absolute;
   left: 0px;
+  z-index: 10;
   width: 100%;
   transform-origin: top;
   --tw-translate-y: 0px;
@@ -993,8 +1007,8 @@ form.visible {
 }
 
 label {
-  font-size: 3vw;
-  line-height: 3vw;
+  font-size: clamp(10px, 3vw, 15px);
+  line-height: clamp(10px, 3vw, 15px);
   padding-bottom: 0.5rem;
 }
 
@@ -1014,8 +1028,8 @@ input {
 }
 
 .tag {
-  font-size: 3vw;
-  line-height: 3vw;
+  font-size: clamp(10px, 3vw, 15px);
+  line-height: clamp(10px, 3vw, 15px);
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   width: -moz-fit-content;
@@ -1038,10 +1052,10 @@ input {
 
 button {
   font-family: 'GeneralSans-Semibold';
-  font-weight: 100;
-  font-size: 5vw;
-  line-height: 5vw;
+  font-size: clamp(20px, 6vw, 30px);
+  line-height: clamp(20px, 6.5vw, 30px);
   letter-spacing: .1vw;
+  cursor: pointer;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1061,8 +1075,8 @@ button {
 
 .button--secondary {
   font-family: 'GeneralSans-Regular';
-  font-size: 4vw;
-  line-height: 4vw;
+  font-size: clamp(12px, 4vw, 20px);
+  line-height: clamp(12px, 4vw, 20px);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1.25rem;
@@ -1094,8 +1108,9 @@ button.edit {
 
 .button--close {
   font-family: 'GeneralSans-Regular';
-  font-size: 4vw;
-  line-height: 4vw;
+  font-size: clamp(12px, 4vw, 20px);
+  line-height: clamp(12px, 4vw, 20px);
+  cursor: pointer;
   border-radius: 9999px;
   padding-left: 0px;
   padding-right: 0px;

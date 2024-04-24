@@ -7,130 +7,146 @@
     <link rel="stylesheet" href="./styles/output.css">
 </head>
 <body>
-    <header>
-        <h1>A buenas horas, Santi</h1>
-        <div class="highlights">
-            <div class="highlight counTasks" data-type="Todos">
-                <h4>Todas</h4>
-                <div class="numTasks"></div>
-            </div>
-            <div class="highlight counTasksHigh" data-type="Alta">
-                <h4>¡Urge!</h4>
-                <div class="numTasksHigh"></div>
-            </div>
-            <div class="highlight counTasksMedium" data-type="Media">
-                <h4>Ve haciendo</h4>
-                <div class="numTasksMedium"></div>
-            </div>
-            <div class="highlight counTasksLow" data-type="Baja">
-                <h4>Con calma</h4>
-                <div class="numTasksLow"></div>
-            </div>
-        </div>
-    </header>
-    
-    <section class="task-detail">
-        <div class="section-wrapper">
-            <div class="close-bar"><h2></h2><div class="close button button--close">Close</div></div>
-            <div class="header-task">
-                <div class="date-time">
-                    <div class="date"></div>
-                    <div class="time"></div>
+    <div class="bodyView">
+        <header>
+            <h1>A buenas horas, Sergio</h1>
+            <div class="highlights">
+                <div class="highlight counTasks" data-type="Todos">
+                    <h4>Todas</h4>
+                    <div class="numTasks"></div>
                 </div>
-                <div class="priority"></div>
+                <div class="highlight counTasksHigh" data-type="Alta">
+                    <h4>¡Urge!</h4>
+                    <div class="numTasksHigh"></div>
+                </div>
+                <div class="highlight counTasksMedium" data-type="Media">
+                    <h4>Ve haciendo</h4>
+                    <div class="numTasksMedium"></div>
+                </div>
+                <div class="highlight counTasksLow" data-type="Baja">
+                    <h4>Con calma</h4>
+                    <div class="numTasksLow"></div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="task-detail">
+            <div class="section-wrapper">
+                <div class="close-bar"><h2></h2><div class="close button button--close">Close</div></div>
+                <div class="header-task">
+                    <div class="date-time">
+                        <div class="date"></div>
+                        <div class="time"></div>
+                    </div>
+                    <div class="priority"></div>
+                </div>
+                
+                <div class="categories-container"></div>
+                <p></p>
+                <div class="actions-task">
+                    <button class="button delete button--secondary">Eliminar tarea</button>
+                    <button class="button edit button--secondary">Editar tarea</button>
+                </div>
+                
+            </div>
+           
+        </section>
+        
+        <section class="tasks-container">
+            
+            <div class="section-wrapper">
+            
+            </div>
+             
+        </section>
+        <div class="nav">
+            <button class="button add">Añadir una tarea</button>
+        </div>
+        
+        <form class="add">
+            <div class="close-bar"><h3>Añadir tarea</h3><div class="close button button--close">Close</div></div>
+            
+            <div class="form_section">
+                <label for="title">Título</label>
+                <input id="title" type="text">
+            </div>
+            <div class="form_section">
+                <label for="description">Descripción</label>
+                <input id="description" type="text">
             </div>
             
-            <div class="categories-container"></div>
-            <p></p>
-            <div class="actions-task">
-                <button class="button delete button--secondary">Eliminar tarea</button>
-                <button class="button edit button--secondary">Editar tarea</button>
+            <!-- <label for="image">Image URL</label>
+            <input id="image" type="text"> -->
+            <div class="form_section horizontal">
+                <div>
+                    <label for="date">Fecha</label>
+                    <input id="date" type="date">
+                </div>
+                <div>
+                    <label for="time">Hora</label>
+                    <input id="time" type="time">
+                </div>
+            </div>
+           
+            <div class="form_section">
+                <label for="categories">Create a category</label>
+                <div class="categories">
+                    <div class="categories-container categories-added"></div>
+                    <input id="newTag">
+                </div>
+            </div>
+            <div class="form_section">
+                <label for="priority">Prioridad</label>
+                <select id="priority" name="priority">
+                    <option value="Baja">Baja</option>
+                    <option value="Media">Media</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+            <button id="submitTask" class="button button--primary">Submit</button>
+        </form>
+    
+        <form class="edit">
+            <div class="close-bar"><h3>Editar tarea</h3><div class="close button button--close">Close</div></div>
+            <div class="form_section">
+                <label for="title">Título</label>
+                <input id="title" type="text">
+            </div>
+            <div class="form_section">
+                <label for="description">Descripción</label>
+                <input id="description" type="text">
             </div>
             
-        </div>
-       
-    </section>
-    
-    <section class="tasks-container">
-        
-        <div class="section-wrapper">
-        
-        </div>
-         
-    </section>
-    <div class="nav">
-        <button class="button add">Añadir una tarea</button>
-    </div>
-    
-    <form class="add">
-        <div class="close-bar"><h3>Añadir tarea</h3><div class="close button button--close">Close</div></div>
-        
-        <div class="form_section">
-            <label for="title">Título</label>
-            <input id="title" type="text">
-        </div>
-        <div class="form_section">
-            <label for="description">Descripción</label>
-            <input id="description" type="text">
-        </div>
-        
-        <!-- <label for="image">Image URL</label>
-        <input id="image" type="text"> -->
-        <div class="form_section horizontal">
-            <div>
-                <label for="date">Fecha</label>
-                <input id="date" type="date">
+            <!-- <label for="image">Image URL</label>
+            <input id="image" type="text"> -->
+            <div class="form_section horizontal">
+                <div>
+                    <label for="date">Fecha</label>
+                    <input id="date" type="date">
+                </div>
+                <div>
+                    <label for="time">Hora</label>
+                    <input id="time" type="time">
+                </div>
             </div>
-            <div>
-                <label for="time">Hora</label>
-                <input id="time" type="time">
-            </div>
-        </div>
-       
-        <div class="form_section">
-            <label for="categories">Create a category</label>
+            <!-- <label for="categories">Create a category</label>
             <div class="categories">
                 <div class="categories-container categories-added"></div>
                 <input id="newTag">
+            </div> -->
+            <div class="form_section">
+                <label for="priority">Prioridad</label>
+                <select id="priority" name="priority">
+                    <option value="Baja">Baja</option>
+                    <option value="Media">Media</option>
+                    <option value="Alta">Alta</option>
+                </select>
             </div>
-        </div>
-        <div class="form_section">
-            <label for="priority">Prioridad</label>
-            <select id="priority" name="priority">
-                <option value="Baja">Baja</option>
-                <option value="Media">Media</option>
-                <option value="Alta">Alta</option>
-            </select>
-        </div>
-        <button id="submitTask" class="button button--primary">Submit</button>
-    </form>
-
-    <form class="edit">
-        <div class="close-bar"><h3>Editar tarea</h3><div class="close button button--close">Close</div></div>
-        
-        <label for="title">Título</label>
-        <input id="title" type="text">
-        <label for="description">Descripción</label>
-        <input id="description" type="text">
-        <!-- <label for="image">Image URL</label>
-        <input id="image" type="text"> -->
-        <label for="date">Fecha</label>
-        <input id="date" type="date">
-        <label for="time">Hora</label>
-        <input id="time" type="time">
-        <!-- <label for="categories">Create a category</label>
-        <div class="categories">
-            <div class="categories-container categories-added"></div>
-            <input id="newTag">
-        </div> -->
-        <label for="priority">Prioridad</label>
-        <select id="priority" name="priority">
-            <option value="Baja">Baja</option>
-            <option value="Media">Media</option>
-            <option value="Alta">Alta</option>
-        </select>
-        <button id="submitEditTask" class="button button--primary">Save edition</button>
-    </form>
+            
+            <button id="submitEditTask" class="button button--primary">Save edition</button>
+        </form>
+    </div>
+    
     <script src="./js/main.js" type="module"></script>
 </body>
 </html>

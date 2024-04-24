@@ -32,17 +32,31 @@
     font-style: normal;
   }
 
-  html {
+
+
+
+html {
+    width: 100dvw;
     height: 100dvh;
-  }
+    @apply
+    bg-black
+    fixed
+    flex
+    justify-center
+    items-center;
 
+}
 
-body {
+.bodyView {
     height: 100dvh;
     background-color: whitesmoke;
+    max-width: 500px;
+    max-height: 900px;
     @apply
+    overflow-hidden
+    relative
     top-0
-    fixed
+    rounded-lg
     left-0;
 }
 
@@ -51,16 +65,10 @@ body {
 }
 
 header {
-    height: 50dvh;
     @apply
     z-10
     relative
-    
-    bg-gradient-to-b
-    from-white
-    from-60%
-    via-white
-    to-transparent;
+;
 }
 header h1 {
     @apply
@@ -70,7 +78,8 @@ header h1 {
 header .highlights {
     @apply
     p-2
-    overflow-y-scroll
+    overflow-x-scroll
+    overflow-y-hidden
     aspect-dosAuno
     mt-4
     flex
@@ -81,6 +90,7 @@ header .highlights {
 header .highlights .highlight {
     background-position-y: 8vw;
     @apply
+    cursor-pointer
     opacity-80
     bg-blend-multiply
     bg-no-repeat
@@ -96,16 +106,21 @@ header .highlights .highlight {
 header .highlights .highlight.active {
     @apply
     shadow-md
-    shadow-purple-300
+    border
+    border-solid
+    border-purple-300
     opacity-100
 }
 header .highlights .highlight h4 {
-    font-size: 3.5vw;;
+    font-size: clamp(10px, 3.5vw, 20px);
+    line-height: clamp(10px, 3.5vw, 20px);
 }
 
 header .highlights .highlight div {
     font-size: 9vw;
     line-height: 8vw;
+    font-size: clamp(20px, 9vw, 40px);
+    line-height: clamp(20px, 8vw, 40px);
     font-family: 'GeneralSans-Bold';
     @apply
     text-right;
@@ -122,29 +137,29 @@ header .highlights .highlight.counTasksLow {
     background-image: url(../assets/images/flag.png);
     @apply
     text-green-800
-    bg-green-200
-    shadow-green-300;
+    border-green-300
+    bg-green-200;
 }
 
 header .highlights .highlight.counTasksMedium {
     background-image: url(../assets/images/rayo.png);
     @apply
     text-orange-800
-    bg-orange-200
-    shadow-orange-300;
+    border-orange-300
+    bg-orange-200;
 }
 
 header .highlights .highlight.counTasksHigh {
     background-image: url(../assets/images/fuego.png);
     @apply
     text-red-800
-    bg-red-200
-    shadow-red-300;
+    border-red-300
+    bg-red-200;
 }
 
 h1 {
-    font-size: 14vw;
-    line-height: 14vw;
+    font-size: clamp(50px, 14vw, 70px);
+    line-height: clamp(50px, 14vw, 70px);
     letter-spacing: .01vw;;
     font-family: 'GeneralSans-Bold';
     @apply
@@ -152,24 +167,24 @@ h1 {
 }
 
 h2 {
-    font-size: 6vw;
-    line-height: 6vw;
-    letter-spacing: .1vw;;
+    font-size: clamp(20px, 6vw, 30px);
+    line-height: clamp(20px, 6.5vw, 30px);
+    letter-spacing: -.1vw;;
     font-family: 'GeneralSans-Semibold';
 }
 
 h3 {
-    font-size: 6vw;
-    line-height: 6vw;
+    font-size: clamp(20px, 6vw, 30px);
+    line-height: clamp(20px, 6.5vw, 30px);
     letter-spacing: .1vw;;
     font-family: 'GeneralSans-Semibold';
 }
 
 .nav {
-    height: 30vw;
+    height: 100px;
     @apply
     w-full
-    fixed
+    absolute
     bottom-0
    bg-gradient-to-t
    from-white
@@ -191,9 +206,8 @@ button.add {
 
 .tasks-container {
     height: 100dvh;
-    padding-top: 50dvh;
     @apply
-    fixed
+    relative
     w-full
     bottom-0
     overflow-hidden
@@ -201,8 +215,10 @@ button.add {
     pb-20;
 }
 
+
 .task {
     @apply
+    cursor-pointer
     hidden
     bg-white
     m-2
@@ -233,6 +249,10 @@ button.add {
     gap-2;
 }
 
+.task .header-task {
+    @apply
+    items-start;
+}
 .task .header-task h2 {
     @apply
     mb-2;
@@ -260,8 +280,8 @@ button.add {
 }
 
 .priority {
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: clamp(10px, 3vw, 15px);
+    line-height: clamp(10px, 3vw, 15px);
     @apply
     flex
     justify-center
@@ -298,7 +318,7 @@ button.add {
 }
 
 .task-detail {
-    width: 100vw;
+    width: 100%;
     height: 100dvh;
     @apply
     p-6
@@ -354,6 +374,7 @@ button.add {
 form {
     top: 100dvh;
     @apply
+    z-10
     p-3
     duration-700
     ease-in-out
@@ -404,8 +425,8 @@ form.visible {
 }
 
 label {
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: clamp(10px, 3vw, 15px);
+    line-height: clamp(10px, 3vw, 15px);
     @apply
     pb-2;
 }
@@ -427,8 +448,8 @@ input {
 }
 
 .tag {
-    font-size: 3vw;
-    line-height: 3vw;
+    font-size: clamp(10px, 3vw, 15px);
+    line-height: clamp(10px, 3vw, 15px);
     @apply
     w-fit
     bg-gray-200
@@ -447,11 +468,11 @@ input {
 
 button {
     font-family: 'GeneralSans-Semibold';
-    font-weight: 100;
-    font-size: 5vw;
-    line-height: 5vw;
+    font-size: clamp(20px, 6vw, 30px);
+    line-height: clamp(20px, 6.5vw, 30px);
     letter-spacing: .1vw;
     @apply
+    cursor-pointer
     py-3
     px-5
     bg-black
@@ -466,8 +487,8 @@ button {
 }
 .button--secondary {
     font-family: 'GeneralSans-Regular';
-    font-size: 4vw;
-    line-height: 4vw;
+    font-size: clamp(12px, 4vw, 20px);
+    line-height: clamp(12px, 4vw, 20px);
     @apply
     py-2
     px-5;
@@ -497,9 +518,10 @@ button.edit {
 
 .button--close {
     font-family: 'GeneralSans-Regular';
-    font-size: 4vw;
-    line-height: 4vw;
+    font-size: clamp(12px, 4vw, 20px);
+    line-height: clamp(12px, 4vw, 20px);
     @apply
+    cursor-pointer
     rounded-full
     text-purple-700
     px-0
