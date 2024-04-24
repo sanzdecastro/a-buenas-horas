@@ -95,6 +95,8 @@ header .highlights .highlight {
 }
 header .highlights .highlight.active {
     @apply
+    shadow-md
+    shadow-purple-300
     opacity-100
 }
 header .highlights .highlight h4 {
@@ -120,21 +122,24 @@ header .highlights .highlight.counTasksLow {
     background-image: url(../assets/images/flag.png);
     @apply
     text-green-800
-    bg-green-200;
+    bg-green-200
+    shadow-green-300;
 }
 
 header .highlights .highlight.counTasksMedium {
     background-image: url(../assets/images/rayo.png);
     @apply
     text-orange-800
-    bg-orange-200;
+    bg-orange-200
+    shadow-orange-300;
 }
 
 header .highlights .highlight.counTasksHigh {
     background-image: url(../assets/images/fuego.png);
     @apply
     text-red-800
-    bg-red-200;
+    bg-red-200
+    shadow-red-300;
 }
 
 h1 {
@@ -178,8 +183,8 @@ h3 {
 
 button.add {
     @apply
-    bg-purple-400
-    text-purple-950
+    bg-purple-500
+    text-white
     w-full;
 }
 
@@ -222,6 +227,12 @@ button.add {
     mb-0;
 }
 
+.task .date-time {
+    @apply
+    flex
+    gap-2;
+}
+
 .task .header-task h2 {
     @apply
     mb-2;
@@ -244,7 +255,7 @@ button.add {
     mb-2
     gap-4
     flex
-    items-start
+    items-center
     justify-between;
 }
 
@@ -281,7 +292,6 @@ button.add {
 
 .task-detail .date-time {
     @apply
-    mb-2
     flex
     gap-4
     text-gray-400;
@@ -360,7 +370,11 @@ form {
     rounded-2xl;
 }
 
-
+form h3 {
+    @apply
+    text-gray-800
+    mb-2;
+}
 .form_section {
     @apply
    
@@ -383,7 +397,7 @@ form {
     w-1/2;
 }
 
-form.visible, form.editing {
+form.visible {
     @apply
     z-10
     -translate-y-full;
@@ -445,6 +459,11 @@ button {
     rounded-full;
 }
 
+.button--primary {
+    @apply
+    w-full
+    bg-purple-500;
+}
 .button--secondary {
     font-family: 'GeneralSans-Regular';
     font-size: 4vw;
@@ -464,4 +483,26 @@ button.edit {
     @apply
     bg-blue-100
     text-blue-600;
+}
+
+.close-bar {
+    @apply
+    border-b
+    border-gray-200
+    mb-4
+    flex
+    justify-between;
+}
+
+
+.button--close {
+    font-family: 'GeneralSans-Regular';
+    font-size: 4vw;
+    line-height: 4vw;
+    @apply
+    rounded-full
+    text-purple-700
+    px-0
+    pt-2
+    pb-3;
 }

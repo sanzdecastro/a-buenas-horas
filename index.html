@@ -31,14 +31,15 @@
     
     <section class="task-detail">
         <div class="section-wrapper">
+            <div class="close-bar"><h2></h2><div class="close button button--close">Close</div></div>
             <div class="header-task">
-                <h2></h2>
+                <div class="date-time">
+                    <div class="date"></div>
+                    <div class="time"></div>
+                </div>
                 <div class="priority"></div>
             </div>
-            <div class="date-time">
-                <div class="date"></div>
-                <div class="time"></div>
-            </div>
+            
             <div class="categories-container"></div>
             <p></p>
             <div class="actions-task">
@@ -62,8 +63,8 @@
     </div>
     
     <form class="add">
+        <div class="close-bar"><h3>Añadir tarea</h3><div class="close button button--close">Close</div></div>
         
-        <h3>Añadir tarea</h3>
         <div class="form_section">
             <label for="title">Título</label>
             <input id="title" type="text">
@@ -105,6 +106,8 @@
     </form>
 
     <form class="edit">
+        <div class="close-bar"><h3>Editar tarea</h3><div class="close button button--close">Close</div></div>
+        
         <label for="title">Título</label>
         <input id="title" type="text">
         <label for="description">Descripción</label>

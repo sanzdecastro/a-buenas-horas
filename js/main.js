@@ -1,7 +1,20 @@
-import { createLabelCategory } from './modules/createLabel.js';
 import { getDataTasks } from './modules/getDataTasks.js';
 import { getDataCategories } from './modules/getDataCategories.js';
+import { postData } from './modules/postData.js';
+import { postCategory } from './modules/postData.js';
+
+import { printTasks } from "./modules/printTasks.js";
+import { printCategories } from "./modules/printCategories.js";
+
+import { countTasks } from "./modules/countTasks.js";
+import { filterTasks } from "./modules/filterTasks.js";
+
+import { createLabelCategory } from './modules/createLabel.js';
 import { selectCategories } from './modules/selectedCategories.js';
+
+import { deleteTask } from "./modules/deleteTask.js";
+import { editTask } from "./modules/editTask.js";
+import { openTask } from './modules/openTask.js';
 
 // URL de los datos de tareas (creado con json server)
 const tasksJSON = 'http://localhost:3000/tasks';
@@ -9,63 +22,18 @@ const tasksJSON = 'http://localhost:3000/tasks';
 // URL de los datos de tareas (creado con json server)
 const categoriesJSON = 'http://localhost:3000/categories';
 
-getDataCategories(categoriesJSON);
-getDataTasks(tasksJSON);
+const categories = await getDataCategories(categoriesJSON);
+const tasks = await getDataTasks(tasksJSON);
 
+console.log(tasks);
 
-
-
-
-// Solicitud de ENVÍO de datos
-
-function postData(newTask) {
-    fetch(tasksJSON, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newTask)
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('No se pudo crear la tarea');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Nueva tarea creada:', data);
-        // Aquí podrías mostrar un mensaje de éxito o redirigir a otra página
-      })
-      .catch(error => {
-        console.error('Se produjo un error al crear la tarea:', error);
-        // Aquí podrías mostrar un mensaje de error al usuario
-      });
-}
-
-function postCategory(newCategory) {
-    fetch(categoriesJSON, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newCategory)
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('No se pudo crear la tarea');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Nueva categoría creada:', data);
-        // Aquí podrías mostrar un mensaje de éxito o redirigir a otra página
-      })
-      .catch(error => {
-        console.error('Se produjo un error al crear la categoría:', error);
-        // Aquí podrías mostrar un mensaje de error al usuario
-      });
-}
-
+printTasks(tasks);
+printCategories(categories);
+countTasks(tasks);
+filterTasks(tasks);
+openTask(tasks, deleteTask, editTask);
+createLabelCategory();
+selectCategories();
 
 // Submit nueva tarea
 const buttonSubmit = document.getElementById("submitTask");
@@ -95,7 +63,7 @@ function submitTask() {
         const newCategories = {
             title: title
         };
-        postCategory(newCategories);
+        postCategory(newCategories, categoriesJSON);
     });
 
 
@@ -109,13 +77,14 @@ function submitTask() {
       priority: priority
     };
 
-    postData(newTask);
+    postData(newTask, tasksJSON);
 }
 
-createLabelCategory();
-selectCategories();
+
+// Abrir card para añadir tarea
 
 addTaskButton();
+
 function addTaskButton() {
     document.querySelector(".add").addEventListener("click", function(){
         let card = document.querySelector("form")
@@ -124,16 +93,24 @@ function addTaskButton() {
     })
 }
 
-// closeCard();
-// function closeCard() {
 
-//     document.querySelector("body").addEventListener("click", function(){
-//         let card = document.querySelector("form")
+// Cerrar card
+const buttonsCloseCard = document.querySelectorAll("form .close-bar .close");
+buttonsCloseCard.forEach(buttonClose => buttonClose.addEventListener("click", closeCard))
 
-//         card.classList.toggle("visible");
-//     })
-    
-// }
+function closeCard() {
+  const cards = document.querySelectorAll("form");
+  cards.forEach(card => card.classList.remove("visible"));
+}
+
+// Cerrar tarea abierta
+const buttonCloseWindow = document.querySelector(".task-detail .close-bar .close");
+buttonCloseWindow.addEventListener("click", closeWindow);
+
+function closeWindow() {
+  const window = document.querySelector(".task-detail");
+  window.classList.remove("opened");
+}
 
 
 

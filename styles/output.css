@@ -660,6 +660,11 @@ header .highlights .highlight {
 
 header .highlights .highlight.active {
   opacity: 1;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: #d8b4fe;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 header .highlights .highlight h4 {
@@ -687,6 +692,8 @@ header .highlights .highlight.counTasksLow {
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
+  --tw-shadow-color: #86efac;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 header .highlights .highlight.counTasksMedium {
@@ -695,6 +702,8 @@ header .highlights .highlight.counTasksMedium {
   background-color: rgb(254 215 170 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(154 52 18 / var(--tw-text-opacity));
+  --tw-shadow-color: #fdba74;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 header .highlights .highlight.counTasksHigh {
@@ -703,6 +712,8 @@ header .highlights .highlight.counTasksHigh {
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
+  --tw-shadow-color: #fca5a5;
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 h1 {
@@ -756,9 +767,9 @@ h3 {
 button.add {
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(59 7 100 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .tasks-container {
@@ -800,6 +811,11 @@ button.add {
   margin-bottom: 0px;
 }
 
+.task .date-time {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .task .header-task h2 {
   margin-bottom: 0.5rem;
 }
@@ -818,7 +834,7 @@ button.add {
 .header-task {
   margin-bottom: 0.5rem;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -860,7 +876,6 @@ button.add {
 }
 
 .task-detail .date-time {
-  margin-bottom: 0.5rem;
   display: flex;
   gap: 1rem;
   --tw-text-opacity: 1;
@@ -945,6 +960,12 @@ form {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+form h3 {
+  margin-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .form_section {
   margin-bottom: 0.5rem;
   display: flex;
@@ -965,7 +986,7 @@ form {
   width: 50%;
 }
 
-form.visible, form.editing {
+form.visible {
   z-index: 10;
   --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1032,6 +1053,12 @@ button {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.button--primary {
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
+}
+
 .button--secondary {
   font-family: 'GeneralSans-Regular';
   font-size: 4vw;
@@ -1054,4 +1081,26 @@ button.edit {
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.close-bar {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.button--close {
+  font-family: 'GeneralSans-Regular';
+  font-size: 4vw;
+  line-height: 4vw;
+  border-radius: 9999px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
 }
