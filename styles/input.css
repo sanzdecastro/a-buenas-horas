@@ -50,14 +50,19 @@ html {
 .bodyView {
     height: 100dvh;
     background-color: whitesmoke;
-    max-width: 500px;
-    max-height: 900px;
+    max-width: 470px;
     @apply
     overflow-hidden
     relative
     top-0
     rounded-lg
     left-0;
+}
+
+@media  (min-width: 1000px) {
+    .bodyView {
+        max-width: 30vw;
+    }
 }
 
 * {
@@ -67,9 +72,17 @@ html {
 header {
     @apply
     z-10
-    relative
-;
+    transition-all
+    duration-300
+    relative;
 }
+
+header.blur, section.blur {
+    @apply
+    blur-sm;
+}
+
+
 header h1 {
     @apply
     p-2;
@@ -81,23 +94,26 @@ header .highlights {
     overflow-x-scroll
     overflow-y-hidden
     aspect-dosAuno
-    mt-4
     flex
+    flex-wrap
     flex-row
     gap-2;
 }
 
 header .highlights .highlight {
-    background-position-y: 8vw;
+    width: calc(33.333% - 6px);
+    background-position: -18%;
     @apply
     cursor-pointer
     opacity-80
     bg-blend-multiply
     bg-no-repeat
-    aspect-vertical
+    bg-contain
+    aspect-video
     rounded-lg
-    px-4
-    py-3
+    px-3
+    pt-2
+    pb-3
     bg-purple-100
     flex
     flex-col
@@ -114,11 +130,10 @@ header .highlights .highlight.active {
 header .highlights .highlight h4 {
     font-size: clamp(10px, 3.5vw, 20px);
     line-height: clamp(10px, 3.5vw, 20px);
+    font-family: 'GeneralSans-Semibold';
 }
 
 header .highlights .highlight div {
-    font-size: 9vw;
-    line-height: 8vw;
     font-size: clamp(20px, 9vw, 40px);
     line-height: clamp(20px, 8vw, 40px);
     font-family: 'GeneralSans-Bold';
@@ -127,8 +142,11 @@ header .highlights .highlight div {
 }
 
 header .highlights .highlight.counTasks {
-    background-image: url(../assets/images/folder.png);
+    /* background-image: url(../assets/images/folder.png); */
+    height: 50px;
     @apply
+    w-full
+    flex-row
     text-purple-800
     bg-purple-200;
 }
@@ -136,6 +154,7 @@ header .highlights .highlight.counTasks {
 header .highlights .highlight.counTasksLow {
     background-image: url(../assets/images/flag.png);
     @apply
+    items-end
     text-green-800
     border-green-300
     bg-green-200;
@@ -144,6 +163,7 @@ header .highlights .highlight.counTasksLow {
 header .highlights .highlight.counTasksMedium {
     background-image: url(../assets/images/rayo.png);
     @apply
+    items-end
     text-orange-800
     border-orange-300
     bg-orange-200;
@@ -152,6 +172,7 @@ header .highlights .highlight.counTasksMedium {
 header .highlights .highlight.counTasksHigh {
     background-image: url(../assets/images/fuego.png);
     @apply
+    items-end
     text-red-800
     border-red-300
     bg-red-200;
@@ -169,14 +190,14 @@ h1 {
 h2 {
     font-size: clamp(20px, 6vw, 30px);
     line-height: clamp(20px, 6.5vw, 30px);
-    letter-spacing: -.1vw;;
+    letter-spacing: -.06vw;
     font-family: 'GeneralSans-Semibold';
 }
 
 h3 {
     font-size: clamp(20px, 6vw, 30px);
     line-height: clamp(20px, 6.5vw, 30px);
-    letter-spacing: .1vw;;
+    letter-spacing: -.06vw;
     font-family: 'GeneralSans-Semibold';
 }
 
@@ -205,7 +226,7 @@ button.add {
 
 
 .tasks-container {
-    height: 100dvh;
+    height: 60dvh;
     @apply
     relative
     w-full
@@ -231,6 +252,11 @@ button.add {
     border-solid
     border-indigo-50
     shadow-indigo-100;
+}
+
+.task .categories {
+    @apply
+    gap-1;
 }
 
 .task.visible {
@@ -442,12 +468,54 @@ input {
 }
 
 .categories-container {
+    column-gap: 4px;
     @apply
     flex
     flex-wrap;
 }
 
+.new-tag {
+    @apply
+    flex
+    gap-2;
+}
+.tag-group {
+    font-size: 12px;
+    line-height: 12px;
+    @apply
+    cursor-pointer
+    text-blue-500
+    flex
+    items-center
+    bg-blue-200
+    overflow-hidden
+    pr-3
+    mb-2
+    rounded-full;
+}
+
+.tag-group.selected .new-tag {
+    @apply
+    text-blue-100
+    bg-blue-400;
+}
+
 .tag {
+    font-size: clamp(10px, 3vw, 15px);
+    line-height: clamp(10px, 3vw, 15px);
+    @apply
+    cursor-pointer
+    w-fit
+    bg-gray-200
+    px-2
+    py-1
+    rounded-2xl
+    
+    mb-2
+    ;
+}
+
+.new-tag {
     font-size: clamp(10px, 3vw, 15px);
     line-height: clamp(10px, 3vw, 15px);
     @apply
@@ -457,7 +525,7 @@ input {
     py-1
     rounded-2xl
     mr-2
-    mb-2;
+    ;
 }
 
 .tag.selected {
@@ -470,7 +538,7 @@ button {
     font-family: 'GeneralSans-Semibold';
     font-size: clamp(20px, 6vw, 30px);
     line-height: clamp(20px, 6.5vw, 30px);
-    letter-spacing: .1vw;
+    letter-spacing: -.06vw;
     @apply
     cursor-pointer
     py-3

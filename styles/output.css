@@ -610,13 +610,18 @@ html {
 .bodyView {
   height: 100dvh;
   background-color: whitesmoke;
-  max-width: 500px;
-  max-height: 900px;
+  max-width: 470px;
   position: relative;
   top: 0px;
   left: 0px;
   overflow: hidden;
   border-radius: 0.5rem;
+}
+
+@media  (min-width: 1000px) {
+  .bodyView {
+    max-width: 30vw;
+  }
 }
 
 * {
@@ -626,6 +631,14 @@ html {
 header {
   position: relative;
   z-index: 10;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+header.blur, section.blur {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 header h1 {
@@ -633,10 +646,10 @@ header h1 {
 }
 
 header .highlights {
-  margin-top: 1rem;
   display: flex;
   aspect-ratio: 2/.8;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -644,19 +657,21 @@ header .highlights {
 }
 
 header .highlights .highlight {
-  background-position-y: 8vw;
+  width: calc(33.333% - 6px);
+  background-position: -18%;
   display: flex;
-  aspect-ratio: 12/14;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(243 232 255 / var(--tw-bg-opacity));
+  background-size: contain;
   background-repeat: no-repeat;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.75rem;
   opacity: 0.8;
   background-blend-mode: multiply;
@@ -676,11 +691,10 @@ header .highlights .highlight.active {
 header .highlights .highlight h4 {
   font-size: clamp(10px, 3.5vw, 20px);
   line-height: clamp(10px, 3.5vw, 20px);
+  font-family: 'GeneralSans-Semibold';
 }
 
 header .highlights .highlight div {
-  font-size: 9vw;
-  line-height: 8vw;
   font-size: clamp(20px, 9vw, 40px);
   line-height: clamp(20px, 8vw, 40px);
   font-family: 'GeneralSans-Bold';
@@ -688,7 +702,10 @@ header .highlights .highlight div {
 }
 
 header .highlights .highlight.counTasks {
-  background-image: url(../assets/images/folder.png);
+  /* background-image: url(../assets/images/folder.png); */
+  height: 50px;
+  width: 100%;
+  flex-direction: row;
   --tw-bg-opacity: 1;
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -697,6 +714,7 @@ header .highlights .highlight.counTasks {
 
 header .highlights .highlight.counTasksLow {
   background-image: url(../assets/images/flag.png);
+  align-items: flex-end;
   --tw-border-opacity: 1;
   border-color: rgb(134 239 172 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
@@ -707,6 +725,7 @@ header .highlights .highlight.counTasksLow {
 
 header .highlights .highlight.counTasksMedium {
   background-image: url(../assets/images/rayo.png);
+  align-items: flex-end;
   --tw-border-opacity: 1;
   border-color: rgb(253 186 116 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
@@ -717,6 +736,7 @@ header .highlights .highlight.counTasksMedium {
 
 header .highlights .highlight.counTasksHigh {
   background-image: url(../assets/images/fuego.png);
+  align-items: flex-end;
   --tw-border-opacity: 1;
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
@@ -745,14 +765,14 @@ h1 {
 h2 {
   font-size: clamp(20px, 6vw, 30px);
   line-height: clamp(20px, 6.5vw, 30px);
-  letter-spacing: -.1vw;
+  letter-spacing: -.06vw;
   font-family: 'GeneralSans-Semibold';
 }
 
 h3 {
   font-size: clamp(20px, 6vw, 30px);
   line-height: clamp(20px, 6.5vw, 30px);
-  letter-spacing: .1vw;
+  letter-spacing: -.06vw;
   font-family: 'GeneralSans-Semibold';
 }
 
@@ -782,7 +802,7 @@ button.add {
 }
 
 .tasks-container {
-  height: 100dvh;
+  height: 60dvh;
   position: relative;
   bottom: 0px;
   width: 100%;
@@ -810,6 +830,10 @@ button.add {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #e0e7ff;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.task .categories {
+  gap: 0.25rem;
 }
 
 .task.visible {
@@ -1023,15 +1047,60 @@ input {
 }
 
 .categories-container {
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.new-tag {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag-group {
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  padding-right: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.tag-group.selected .new-tag {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity));
 }
 
 .tag {
   font-size: clamp(10px, 3vw, 15px);
   line-height: clamp(10px, 3vw, 15px);
-  margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.new-tag {
+  font-size: clamp(10px, 3vw, 15px);
+  line-height: clamp(10px, 3vw, 15px);
+  margin-right: 0.5rem;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 1rem;
@@ -1054,7 +1123,7 @@ button {
   font-family: 'GeneralSans-Semibold';
   font-size: clamp(20px, 6vw, 30px);
   line-height: clamp(20px, 6.5vw, 30px);
-  letter-spacing: .1vw;
+  letter-spacing: -.06vw;
   cursor: pointer;
   border-radius: 9999px;
   --tw-bg-opacity: 1;

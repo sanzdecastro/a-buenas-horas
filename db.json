@@ -1,113 +1,8 @@
 {
   "tasks": [
     {
-      "id": "b987",
-      "title": "2",
-      "description": "lorem",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "a29a",
-      "title": "5",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-      "date": "2024-04-25",
-      "time": "21:02",
-      "categories": [],
-      "priority": "Media"
-    },
-    {
-      "id": "3cc7",
-      "title": "Title",
-      "description": "Lorem ipsum",
-      "date": "2024-04-24",
-      "time": "23:49",
-      "categories": [],
-      "priority": "Alta"
-    },
-    {
-      "id": "0882",
-      "title": "Title",
-      "description": "Lorem ipsum",
-      "date": "2024-04-24",
-      "time": "23:49",
-      "categories": [],
-      "priority": "Alta"
-    },
-    {
-      "id": "2cb3",
-      "title": "Title",
-      "description": "Lorem ipsum",
-      "date": "2024-04-24",
-      "time": "23:49",
-      "categories": [
-        "Sin categoría"
-      ],
-      "priority": "Alta"
-    },
-    {
-      "id": "f921",
-      "title": "tarea",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "f096",
-      "title": "NUEVA e",
-      "description": "Lorem ipsum",
-      "date": "2024-04-26",
-      "time": "14:56",
-      "categories": [],
-      "priority": "Alta"
-    },
-    {
-      "id": "3750",
-      "title": "nuevaaa",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "3aeb",
-      "title": "Nueva editada",
-      "description": "Lorem ipsum",
-      "date": "2024-04-25",
-      "time": "18:54",
-      "categories": [
-        "Sin categoría",
-        "Otra ",
-        "Nueva "
-      ],
-      "priority": "Baja"
-    },
-    {
-      "id": "53c4",
-      "title": "asdfg",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "8340",
-      "title": "New",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
       "id": "aa11",
-      "title": "Llamar a la Safi",
+      "title": "Excursión al Montseny",
       "description": "Lorem ipsum",
       "date": "2024-04-25",
       "time": "00:48",
@@ -117,31 +12,101 @@
       "priority": "Media"
     },
     {
-      "id": "2c72",
-      "title": "nueva nueva 33333",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "57bc",
-      "title": "fds",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "3fd6",
-      "title": "Excursión al Montseny",
-      "description": "El Parque Natural del Montseny (en catalán Parc Natural del Montseny) es un espacio natural protegido español situado en la provincia de Barcelona",
-      "date": "2024-04-28",
-      "time": "09:24",
-      "categories": [],
+      "id": "f154",
+      "title": "Lista compra",
+      "description": "Lorem ipsum",
+      "date": "2024-04-25",
+      "time": "00:48",
+      "categories": [
+        "Frontend ",
+        "Entrevista "
+      ],
       "priority": "Alta"
+    },
+    {
+      "id": "106e",
+      "title": "Comprar rosas",
+      "description": "Comprar rosas para Sant Jordi y autorregalarme un buen libro",
+      "date": "2024-04-23",
+      "time": "",
+      "categories": [
+        "Sin categoría"
+      ],
+      "priority": "Baja"
+    },
+    {
+      "id": "1e53",
+      "title": "Nueva",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "04e5",
+      "title": "wewewe",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "c012",
+      "title": "wewe",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [
+        "Nueva "
+      ],
+      "priority": "Baja"
+    },
+    {
+      "id": "ba31",
+      "title": "",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "7da5",
+      "title": "",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "320a",
+      "title": "",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "c7eb",
+      "title": "",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "f06d",
+      "title": "",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
     }
   ],
   "categories": [
@@ -154,34 +119,6 @@
       "id": "2",
       "title": "Categoría de prueba",
       "postId": "1"
-    },
-    {
-      "id": "ebae",
-      "title": "Otra "
-    },
-    {
-      "id": "5693",
-      "title": "Frontend "
-    },
-    {
-      "id": "833f",
-      "title": "Compras "
-    },
-    {
-      "id": "3f12",
-      "title": "Hola "
-    },
-    {
-      "id": "7a13",
-      "title": "Nueva "
-    },
-    {
-      "id": "4e69",
-      "title": "ds "
-    },
-    {
-      "id": "db43",
-      "title": "hola "
     }
   ]
 }

@@ -40,7 +40,6 @@ const buttonSubmit = document.getElementById("submitTask");
 buttonSubmit.addEventListener("click", submitTask);
 
 function submitTask() {
-  
     // Obtener los valores del formulario
     const title = document.querySelector('#title').value;
     const description = document.querySelector('#description').value;
@@ -48,7 +47,7 @@ function submitTask() {
     const time = document.querySelector('#time').value;
     const priority = document.querySelector('#priority').value;
     // Reunir todas las categorías para asociarlas a la task
-    let divsCategories = document.querySelectorAll(".categories-added .tag.selected")
+    let divsCategories = document.querySelectorAll(".categories-added .tag.selected, .categories-added .selected.new-tag")
     let categories = [];
     divsCategories.forEach(function(category) {
         // Obtener el contenido de cada div y concatenarlo a la variable contenidoCombinado
@@ -56,7 +55,7 @@ function submitTask() {
     });
 
     // Reunir y postear las nuevas categorías
-    let divsNewCategories = document.querySelectorAll(".tag.new-tag")
+    let divsNewCategories = document.querySelectorAll(".selected.new-tag")
     divsNewCategories.forEach(function(category) {
        let title = category.innerHTML
         // Crear objeto de nueva categoría
@@ -65,7 +64,6 @@ function submitTask() {
         };
         postCategory(newCategories, categoriesJSON);
     });
-
 
     // Crear objeto de nueva tarea
     const newTask = {
@@ -88,8 +86,11 @@ addTaskButton();
 function addTaskButton() {
     document.querySelector(".add").addEventListener("click", function(){
         let card = document.querySelector("form")
-
         card.classList.toggle("visible");
+
+        // AÑADIR BLUR
+        let sections = document.querySelectorAll("section, header")
+        sections.forEach((section) => section.classList.toggle("blur"));
     })
 }
 
@@ -99,6 +100,9 @@ const buttonsCloseCard = document.querySelectorAll("form .close-bar .close");
 buttonsCloseCard.forEach(buttonClose => buttonClose.addEventListener("click", closeCard))
 
 function closeCard() {
+  let sections = document.querySelectorAll("section, header")
+  sections.forEach((section) => section.classList.toggle("blur"));
+
   const cards = document.querySelectorAll("form");
   cards.forEach(card => card.classList.remove("visible"));
 }
