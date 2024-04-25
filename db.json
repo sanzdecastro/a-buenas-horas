@@ -1,112 +1,47 @@
 {
   "tasks": [
     {
-      "id": "aa11",
-      "title": "Excursión al Montseny",
-      "description": "Lorem ipsum",
+      "id": "f507",
+      "title": "Presentación CodeOp",
+      "description": "Presentación de la app de tareas para el curso de Frontend de CodeOp",
       "date": "2024-04-25",
-      "time": "00:48",
+      "time": "12:00",
       "categories": [
-        "hola "
-      ],
-      "priority": "Media"
-    },
-    {
-      "id": "f154",
-      "title": "Lista compra",
-      "description": "Lorem ipsum",
-      "date": "2024-04-25",
-      "time": "00:48",
-      "categories": [
-        "Frontend ",
-        "Entrevista "
+        "Frontend "
       ],
       "priority": "Alta"
     },
     {
-      "id": "106e",
-      "title": "Comprar rosas",
-      "description": "Comprar rosas para Sant Jordi y autorregalarme un buen libro",
-      "date": "2024-04-23",
-      "time": "",
-      "categories": [
-        "Sin categoría"
-      ],
-      "priority": "Baja"
-    },
-    {
-      "id": "1e53",
-      "title": "Nueva",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "04e5",
-      "title": "wewewe",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "c012",
-      "title": "wewe",
-      "description": "",
+      "id": "743a",
+      "title": "Lista de la compra",
+      "description": "El aceite carísimo",
       "date": "",
       "time": "",
       "categories": [
-        "Nueva "
+        "Casa "
       ],
-      "priority": "Baja"
+      "priority": "Media"
     },
     {
-      "id": "ba31",
-      "title": "",
-      "description": "",
+      "id": "f602",
+      "title": "Tarea de prueba",
+      "description": "Lorem ipsum",
       "date": "",
       "time": "",
       "categories": [],
       "priority": "Baja"
     },
     {
-      "id": "7da5",
-      "title": "",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "320a",
-      "title": "",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "c7eb",
-      "title": "",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "f06d",
-      "title": "",
-      "description": "",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
+      "id": "09fc",
+      "title": "Nueva tarea 2",
+      "description": "Lorem ipsum",
+      "date": "2024-04-26",
+      "time": "12:34",
+      "categories": [
+        "Categoría de prueba",
+        "Frontend "
+      ],
+      "priority": "Media"
     }
   ],
   "categories": [
@@ -119,6 +54,22 @@
       "id": "2",
       "title": "Categoría de prueba",
       "postId": "1"
+    },
+    {
+      "id": "a2bd",
+      "title": "Frontend "
+    },
+    {
+      "id": "0651",
+      "title": "Amorcito "
+    },
+    {
+      "id": "e24d",
+      "title": "Casa "
+    },
+    {
+      "id": "0203",
+      "title": "Trabajo "
     }
   ]
 }

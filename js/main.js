@@ -16,6 +16,10 @@ import { deleteTask } from "./modules/deleteTask.js";
 import { editTask } from "./modules/editTask.js";
 import { openTask } from './modules/openTask.js';
 
+import { closeCard } from './modules/closeCard.js';
+import { closeWindow } from './modules/closeWindow.js';
+import { addTaskButton } from './modules/addTaskButton.js';
+
 // URL de los datos de tareas (creado con json server)
 const tasksJSON = 'http://localhost:3000/tasks';
 
@@ -65,6 +69,15 @@ function submitTask() {
         postCategory(newCategories, categoriesJSON);
     });
 
+    // let inputs = document.querySelectorAll("input");
+    // inputs.forEach( (input) => {
+    //   if (input.value =="") {
+    //     event.preventDefault();
+    //     input.classList.add("--incomplete")
+    //   } 
+      
+    // })
+
     // Crear objeto de nueva tarea
     const newTask = {
       title: title,
@@ -75,7 +88,10 @@ function submitTask() {
       priority: priority
     };
 
+   
+
     postData(newTask, tasksJSON);
+
 }
 
 
@@ -83,38 +99,13 @@ function submitTask() {
 
 addTaskButton();
 
-function addTaskButton() {
-    document.querySelector(".add").addEventListener("click", function(){
-        let card = document.querySelector("form")
-        card.classList.toggle("visible");
-
-        // AÑADIR BLUR
-        let sections = document.querySelectorAll("section, header")
-        sections.forEach((section) => section.classList.toggle("blur"));
-    })
-}
-
-
 // Cerrar card
 const buttonsCloseCard = document.querySelectorAll("form .close-bar .close");
 buttonsCloseCard.forEach(buttonClose => buttonClose.addEventListener("click", closeCard))
 
-function closeCard() {
-  let sections = document.querySelectorAll("section, header")
-  sections.forEach((section) => section.classList.toggle("blur"));
-
-  const cards = document.querySelectorAll("form");
-  cards.forEach(card => card.classList.remove("visible"));
-}
-
 // Cerrar tarea abierta
 const buttonCloseWindow = document.querySelector(".task-detail .close-bar .close");
 buttonCloseWindow.addEventListener("click", closeWindow);
-
-function closeWindow() {
-  const window = document.querySelector(".task-detail");
-  window.classList.remove("opened");
-}
 
 
 

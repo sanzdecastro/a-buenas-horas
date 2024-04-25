@@ -618,7 +618,7 @@ html {
   border-radius: 0.5rem;
 }
 
-@media  (min-width: 1000px) {
+@media  (min-width: 1320px) {
   .bodyView {
     max-width: 30vw;
   }
@@ -689,14 +689,14 @@ header .highlights .highlight.active {
 }
 
 header .highlights .highlight h4 {
-  font-size: clamp(10px, 3.5vw, 20px);
-  line-height: clamp(10px, 3.5vw, 20px);
+  font-size: clamp(10px, 3.5vw, 16px);
+  line-height: clamp(10px, 3.5vw, 16px);
   font-family: 'GeneralSans-Semibold';
 }
 
 header .highlights .highlight div {
   font-size: clamp(20px, 9vw, 40px);
-  line-height: clamp(20px, 8vw, 40px);
+  line-height: clamp(20px, 8vw, 30px);
   font-family: 'GeneralSans-Bold';
   text-align: right;
 }
@@ -706,10 +706,16 @@ header .highlights .highlight.counTasks {
   height: 50px;
   width: 100%;
   flex-direction: row;
+  align-items: center;
   --tw-bg-opacity: 1;
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(107 33 168 / var(--tw-text-opacity));
+}
+
+header .highlights .highlight.counTasks h4 {
+  font-size: clamp(20px, 4.5vw, 20px);
+  line-height: clamp(20px, 4.5vw, 20px);
 }
 
 header .highlights .highlight.counTasksLow {
@@ -1044,6 +1050,18 @@ input {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
   padding: 0.5rem;
+}
+
+input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+input[required].--incomplete {
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
 }
 
 .categories-container {

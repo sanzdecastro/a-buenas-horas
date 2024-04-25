@@ -86,21 +86,18 @@
             </form>
         </div> -->
         
-        
         <form class="add">
             <div class="close-bar"><h3>Añadir tarea</h3><div class="close button button--close">Close</div></div>
             
             <div class="form_section">
                 <label for="title">Título</label>
-                <input id="title" type="text">
+                <input id="title" type="text" required>
             </div>
             <div class="form_section">
                 <label for="description">Descripción</label>
                 <input id="description" type="text">
             </div>
-            
-            <!-- <label for="image">Image URL</label>
-            <input id="image" type="text"> -->
+
             <div class="form_section horizontal">
                 <div>
                     <label for="date">Fecha</label>
@@ -121,13 +118,13 @@
             </div>
             <div class="form_section">
                 <label for="priority">Prioridad</label>
-                <select id="priority" name="priority">
+                <select id="priority" name="priority" required>
                     <option value="Baja">Baja</option>
                     <option value="Media">Media</option>
                     <option value="Alta">Alta</option>
                 </select>
             </div>
-            <button id="submitTask" class="button button--primary">Submit</button>
+            <button id="submitTask" class="button button--primary" type="submit">Submit</button>
         </form>
     
         <form class="edit">
@@ -140,9 +137,7 @@
                 <label for="description">Descripción</label>
                 <input id="description" type="text">
             </div>
-            
-            <!-- <label for="image">Image URL</label>
-            <input id="image" type="text"> -->
+
             <div class="form_section horizontal">
                 <div>
                     <label for="date">Fecha</label>
@@ -153,11 +148,7 @@
                     <input id="time" type="time">
                 </div>
             </div>
-            <!-- <label for="categories">Create a category</label>
-            <div class="categories">
-                <div class="categories-container categories-added"></div>
-                <input id="newTag">
-            </div> -->
+
             <div class="form_section">
                 <label for="priority">Prioridad</label>
                 <select id="priority" name="priority">

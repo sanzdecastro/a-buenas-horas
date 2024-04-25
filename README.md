@@ -10,6 +10,15 @@ eliminar registros (CRUD) poniendo énfasis en el Frontend.
 - Versatilidad: Con pocas funciones, poder adaptarse a la mayoría de tareas o notas domésticas y del día a día.
 - Storytelling: Que aporte una experiencia estimulante en su uso.
 
+## Inicialización
+Cómo inicialiar el proyecto en local:
+
+1. Instalar NPM
+2. <code>npm run serve-json</code> en la consola para inicializar el servidor JSON
+3. <code>npm run start</code> en otra consola para compilar Tailwind CSS
+
+
+## El proyecto
 ### Concepto
 “A buenas horas mangas verdes” se dice para censurar la demora de alguien en atender una necesidad o solucionar un problema, pues o bien ya se ha resuelto o ya no es necesaria su ayuda. 
 
