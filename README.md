@@ -1,27 +1,35 @@
-# A buenas horas, mangas verdes
+# A buenas horas
 
-## Introducción
-*A buenas horas, mangas verdes* es una **aplicación que nos permite generar, categorizar y eliminar tareas**.
+## Introduction
+*A buenas horas, mangas verdes* is a **a tool that allows us to create, categorize, and delete tasks.**.
 
-Es una app con una interfaz dinámica donde consultar, insertar, modificar y 
-eliminar registros (CRUD) poniendo énfasis en el Frontend.
+It's an app with a dynamic interface for querying, inserting, modifying, and deleting records (CRUD) with a focus on the Frontend.
 
-- Simplicidad: Diseño con estructura simple y clara para el día a día
-- Versatilidad: Con pocas funciones, poder adaptarse a la mayoría de tareas o notas domésticas y del día a día.
-- Storytelling: Que aporte una experiencia estimulante en su uso.
+- Simplicity: Designed with a simple and clear structure for everyday use.
+- Versatility: With just a few features, it can adapt to most household tasks or daily notes.
+- Storytelling: Providing a stimulating user experience.
 
-## Inicialización
+## Initialization
 Cómo inicialiar el proyecto en local:
 
-1. Instalar NPM
-2. <code>npm run serve-json</code> en la consola para inicializar el servidor JSON
-3. <code>npm run start</code> en otra consola para compilar Tailwind CSS
+1. Install NPM
+2. <code>npm run serve-json</code> to init JSON server
+3. <code>npm run start</code> to compile Tailwind CSS
 
 
-## El proyecto
-### Concepto
-“A buenas horas mangas verdes” se dice para censurar la demora de alguien en atender una necesidad o solucionar un problema, pues o bien ya se ha resuelto o ya no es necesaria su ayuda. 
+## Future implementations
+1. UX messages in forms.
+2. Basic subtask list.
+3. Filter by categories.
 
-Los mangas verdes eran los cuadrilleros de la Santa Hermandad, quienes vestían de verde y se encargaban de detener y encarcelar a los malhechores en zonas rurales. Se ganaron la fama de llegar tarde, cuando los ladrones ya se habían dado la fuga. De ahí la expresión tan comunmente utilizada.
+Fork to help me!
 
-![Los mangas verdes](https://fotografias.larazon.es/clipping/cmsimages01/2023/04/21/A679B334-308A-4E32-8F64-A4CA77E8B06B/auto-presidido-santo-domingo-guzman-donde-aprecia-soldado-santa-hermandad_98.jpg?crop=1036,583,x0,y0&width=1900&height=1069&optimize=low&format=webply") "*Auto de Fe presidido por Santo Domingo de Guzmán*, donde se aprecia un soldado de la Santa HermandadMuseo del Prado"
+
+## About
+### Concept
+
+The expression 'A buenas horas mangas verdes' is used to criticize someone's delay in addressing a need or solving a problem, as either the issue has already been resolved or their help is no longer needed.
+
+The 'mangas verdes' were the squad members of the Santa Hermandad, who wore green and were responsible for apprehending and imprisoning wrongdoers in rural areas. They gained a reputation for arriving late, after the thieves had already escaped. Hence, the commonly used expression.
+
+![Los mangas verdes](https://fotografias.larazon.es/clipping/cmsimages01/2023/04/21/A679B334-308A-4E32-8F64-A4CA77E8B06B/auto-presidido-santo-domingo-guzman-donde-aprecia-soldado-santa-hermandad_98.jpg?crop=1036,583,x0,y0&width=1900&height=1069&optimize=low&format=webply") "*Auto de Fe presidido por Santo Domingo de Guzmán*, in Museo del Prado, Madrid"
