@@ -10,7 +10,7 @@ It's an app with a dynamic interface for querying, inserting, modifying, and del
 - Storytelling: Providing a stimulating user experience.
 
 ## Initialization
-Cómo inicialiar el proyecto en local:
+How to initialize the project locally:
 
 1. Install NPM
 2. <code>npm run serve-json</code> to init JSON server
