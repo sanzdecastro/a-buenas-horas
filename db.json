@@ -1,17 +1,6 @@
 {
   "tasks": [
     {
-      "id": "f507",
-      "title": "Presentación CodeOp",
-      "description": "Presentación de la app de tareas para el curso de Frontend de CodeOp",
-      "date": "2024-04-25",
-      "time": "12:00",
-      "categories": [
-        "Frontend "
-      ],
-      "priority": "Alta"
-    },
-    {
       "id": "743a",
       "title": "Lista de la compra",
       "description": "El aceite carísimo",
@@ -42,6 +31,38 @@
         "Frontend "
       ],
       "priority": "Media"
+    },
+    {
+      "id": "e7d6",
+      "title": "Entrevista Frontend",
+      "description": "Lorem",
+      "date": "",
+      "time": "",
+      "categories": [
+        "Frontend ",
+        "Trabajo "
+      ],
+      "priority": "Baja"
+    },
+    {
+      "id": "180a",
+      "title": "Frontend",
+      "description": "",
+      "date": "",
+      "time": "",
+      "categories": [],
+      "priority": "Baja"
+    },
+    {
+      "id": "8990",
+      "title": "Presentación CodeOp",
+      "description": "Presentación",
+      "date": "2024-05-02",
+      "time": "12:03",
+      "categories": [
+        "Frontend "
+      ],
+      "priority": "Alta"
     }
   ],
   "categories": [

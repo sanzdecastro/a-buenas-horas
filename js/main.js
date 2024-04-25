@@ -39,10 +39,23 @@ openTask(tasks, deleteTask, editTask);
 createLabelCategory();
 selectCategories();
 
-// Submit nueva tarea
+// Listener Submit nueva tarea
 const buttonSubmit = document.getElementById("submitTask");
-buttonSubmit.addEventListener("click", submitTask);
+buttonSubmit.addEventListener("click", checkInputs);
 
+// Checkear que no haya inputs required vacíos
+function checkInputs() {
+  let inputs = document.querySelectorAll("input[required]");
+  inputs.forEach( (input) => {
+    if (input.value =="") {
+      input.classList.add("--incomplete")
+    } else {
+      submitTask();
+    }
+  })
+}
+
+// Submit nueva tarea
 function submitTask() {
     // Obtener los valores del formulario
     const title = document.querySelector('#title').value;
@@ -69,14 +82,7 @@ function submitTask() {
         postCategory(newCategories, categoriesJSON);
     });
 
-    // let inputs = document.querySelectorAll("input");
-    // inputs.forEach( (input) => {
-    //   if (input.value =="") {
-    //     event.preventDefault();
-    //     input.classList.add("--incomplete")
-    //   } 
-      
-    // })
+    
 
     // Crear objeto de nueva tarea
     const newTask = {
