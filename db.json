@@ -1,68 +1,47 @@
 {
   "tasks": [
     {
-      "id": "743a",
-      "title": "Lista de la compra",
-      "description": "El aceite carísimo",
-      "date": "",
-      "time": "",
-      "categories": [
-        "Casa "
-      ],
-      "priority": "Media"
-    },
-    {
-      "id": "f602",
-      "title": "Tarea de prueba",
-      "description": "Lorem ipsum",
-      "date": "",
-      "time": "",
-      "categories": [],
-      "priority": "Baja"
-    },
-    {
-      "id": "09fc",
-      "title": "Nueva tarea 2",
-      "description": "Lorem ipsum",
-      "date": "2024-04-26",
-      "time": "12:34",
-      "categories": [
-        "Categoría de prueba",
-        "Frontend "
-      ],
-      "priority": "Media"
-    },
-    {
-      "id": "e7d6",
+      "id": "acc9",
       "title": "Entrevista Frontend",
-      "description": "Lorem",
-      "date": "",
-      "time": "",
+      "description": "Entrevista de trabajo",
+      "date": "2024-05-02",
+      "time": "10:59",
       "categories": [
         "Frontend ",
         "Trabajo "
       ],
+      "priority": "Alta"
+    },
+    {
+      "id": "37d1",
+      "title": "Comprar rosas para Sant Jordi",
+      "description": "Comprar rosas",
+      "date": "2024-04-23",
+      "time": "",
+      "categories": [
+        "Amorcito "
+      ],
       "priority": "Baja"
     },
     {
-      "id": "180a",
-      "title": "Frontend",
-      "description": "",
-      "date": "",
+      "id": "42b2",
+      "title": "Compras de casa",
+      "description": "Lista de compras",
+      "date": "2024-04-28",
       "time": "",
       "categories": [],
-      "priority": "Baja"
+      "priority": "Media"
     },
     {
-      "id": "8990",
-      "title": "Presentación CodeOp",
-      "description": "Presentación",
-      "date": "2024-05-02",
-      "time": "12:03",
+      "id": "b64a",
+      "title": "Limpiar la casa",
+      "description": "Clean and clean",
+      "date": "2024-04-26",
+      "time": "",
       "categories": [
-        "Frontend "
+        "Casa "
       ],
-      "priority": "Alta"
+      "priority": "Baja"
     }
   ],
   "categories": [
