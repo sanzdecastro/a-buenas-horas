@@ -24,7 +24,7 @@ How to initialize the project locally:
 
 Fork to help me!
 
-![App](https://raw.githubusercontent.com/sanzdecastro/a-buenas-horas/main/assets/images/portada.jpg)
+![App](https://raw.githubusercontent.com/sanzdecastro/a-buenas-horas/main/assets/images/portada2.jpg)
 
 ## About
 ### Concept
