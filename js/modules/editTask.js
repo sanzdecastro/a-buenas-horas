@@ -1,6 +1,6 @@
 export async function editTask(id, datosActualizados) {
     try {
-       const url = `http://localhost:3000/tasks/${id}`; // Asegúrate de reemplazar con la URL correcta
+       const url = `https://abuenashoras-api.vercel.app/tasks/${id}`; // Asegúrate de reemplazar con la URL correcta
        const respuesta = await fetch(url, {
          method: 'PATCH',
          headers: {
