@@ -6,7 +6,10 @@ export async function deleteTask(id) {
        const url = `https://abuenashoras-api.vercel.app/tasks/${id}`; // Asegúrate de reemplazar con la URL correcta
        const respuesta = await fetch(url, {
          method: 'DELETE',
-
+         headers: {
+           'Content-Type': 'application/json',
+           // Aquí puedes agregar otros headers si es necesario, como Authorization
+         }
        });
    
        if (!respuesta.ok) {

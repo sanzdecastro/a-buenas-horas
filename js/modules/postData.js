@@ -1,7 +1,9 @@
 export function postData(newTask, tasksJSON) {
     fetch(tasksJSON, {
         method: 'POST',
-
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(newTask)
       })
       .then(response => {
@@ -23,7 +25,9 @@ export function postData(newTask, tasksJSON) {
 export function postCategory(newCategory, categoriesJSON) {
     fetch(categoriesJSON, {
         method: 'POST',
-
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify(newCategory)
       })
       .then(response => {

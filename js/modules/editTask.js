@@ -3,7 +3,9 @@ export async function editTask(id, datosActualizados) {
        const url = `https://abuenashoras-api.vercel.app/tasks/${id}`; // Asegúrate de reemplazar con la URL correcta
        const respuesta = await fetch(url, {
          method: 'PATCH',
-
+         headers: {
+           'Content-Type': 'application/json'
+         },
          body: JSON.stringify(datosActualizados)
        });
    
