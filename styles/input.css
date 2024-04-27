@@ -185,8 +185,8 @@ header .highlights .highlight.counTasksHigh {
 }
 
 h1 {
-    font-size: clamp(50px, 14vw, 70px);
-    line-height: clamp(50px, 14vw, 70px);
+    font-size: clamp(45px, 12vw, 70px);
+    line-height: clamp(45px, 12vw, 70px);
     letter-spacing: .01vw;;
     font-family: 'GeneralSans-Bold';
     @apply
