@@ -13,6 +13,7 @@ export function printTasks(tasks) {
         let priority = task.priority;
 
 
+        console.log(categories);
         let tagHTML = ""
         for (let category of categories){
             tagHTML += `<div class="tag">${category}</div>`
