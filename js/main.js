@@ -21,10 +21,10 @@ import { closeWindow } from './modules/closeWindow.js';
 import { addTaskButton } from './modules/addTaskButton.js';
 
 // URL de los datos de tareas (creado con json server)
-const tasksJSON = 'https://abuenashoras-api.vercel.apptasks';
+const tasksJSON = 'https://abuenashoras-api.vercel.app/tasks';
 
 // URL de los datos de tareas (creado con json server)
-const categoriesJSON = 'https://abuenashoras-api.vercel.appcategories';
+const categoriesJSON = 'https://abuenashoras-api.vercel.app/categories';
 
 const categories = await getDataCategories(categoriesJSON);
 const tasks = await getDataTasks(tasksJSON);
