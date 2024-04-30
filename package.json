@@ -4,8 +4,8 @@
   "author": "Santi Sánchez",
   "license": "Proprietary",
   "scripts": {
-    "start": "npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch",
-    "serve-json": "json-server --watch db.json"
+    "start": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
+    "serve-json": "json-server --watch ./api/db.json"
   },
   "devDependencies": {
     "prettier-plugin-tailwindcss": "^0.1.7",

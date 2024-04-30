@@ -1,4 +1,7 @@
-export function openTask(tasks, deleteTask, editTask) {
+import { deleteTask } from "../services/taskService.js";
+import { editTask } from "../services/taskService.js";
+
+export function openTask(tasks, tasksJSON) {
     // Open Task 
 
     let tasksDivs = document.querySelectorAll(".task");
@@ -51,7 +54,7 @@ export function openTask(tasks, deleteTask, editTask) {
                 
                 let id = deleteButton.getAttribute("data-id")
                 console.log(id);
-                deleteTask(id);
+                deleteTask(id, tasksJSON);
             })
 
             // Editar tarea
@@ -79,7 +82,7 @@ export function openTask(tasks, deleteTask, editTask) {
                   let saveEditButton = document.getElementById("submitEditTask")
 
                   saveEditButton.addEventListener("click", function(){
-                    const datosActualizados = {
+                    const updatedData = {
                         title: titleEdit.value,
                         description: descriptionEdit.value,
                         date: dateEdit.value,
@@ -87,7 +90,7 @@ export function openTask(tasks, deleteTask, editTask) {
                         //categories : categoryEdit,
                         priority: priorityEdit.value
                       };
-                    editTask(id, datosActualizados);
+                    editTask(id, updatedData, tasksJSON);
                   });
             })
         })

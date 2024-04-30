@@ -557,9 +557,9 @@ video {
 @font-face {
   font-family: 'GeneralSans-Regular';
 
-  src: url('../assets/fonts/GeneralSans-Regular.woff2') format('woff2'),
-         url('../assets/fonts/GeneralSans-Regular.woff') format('woff'),
-         url('../assets/fonts/GeneralSans-Regular.ttf') format('truetype');
+  src: url('../../assets/fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('../../assets/fonts/GeneralSans-Regular.woff') format('woff'),
+         url('../../assets/fonts/GeneralSans-Regular.ttf') format('truetype');
 
   font-weight: 400;
 
@@ -571,9 +571,9 @@ video {
 @font-face {
   font-family: 'GeneralSans-Semibold';
 
-  src: url('../assets/fonts/GeneralSans-Semibold.woff2') format('woff2'),
-         url('../assets/fonts/GeneralSans-Semibold.woff') format('woff'),
-         url('../assets/fonts/GeneralSans-Semibold.ttf') format('truetype');
+  src: url('../../assets/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+         url('../../assets/fonts/GeneralSans-Semibold.woff') format('woff'),
+         url('../../assets/fonts/GeneralSans-Semibold.ttf') format('truetype');
 
   font-weight: 600;
 
@@ -585,9 +585,9 @@ video {
 @font-face {
   font-family: 'GeneralSans-Bold';
 
-  src: url('../assets/fonts/GeneralSans-Bold.woff2') format('woff2'),
-         url('../assets/fonts/GeneralSans-Bold.woff') format('woff'),
-         url('../assets/fonts/GeneralSans-Bold.ttf') format('truetype');
+  src: url('../../assets/fonts/GeneralSans-Bold.woff2') format('woff2'),
+         url('../../assets/fonts/GeneralSans-Bold.woff') format('woff'),
+         url('../../assets/fonts/GeneralSans-Bold.ttf') format('truetype');
 
   font-weight: 700;
 
@@ -702,7 +702,7 @@ header .highlights .highlight div {
 }
 
 header .highlights .highlight.counTasks {
-  /* background-image: url(../assets/images/folder.png); */
+  /* background-image: url(../../assets/images/folder.png); */
   height: 50px;
   width: 100%;
   flex-direction: row;
@@ -719,7 +719,7 @@ header .highlights .highlight.counTasks h4 {
 }
 
 header .highlights .highlight.counTasksLow {
-  background-image: url(../assets/images/flag.png);
+  background-image: url(../../assets/images/flag.png);
   align-items: flex-end;
   --tw-border-opacity: 1;
   border-color: rgb(134 239 172 / var(--tw-border-opacity));
@@ -730,7 +730,7 @@ header .highlights .highlight.counTasksLow {
 }
 
 header .highlights .highlight.counTasksMedium {
-  background-image: url(../assets/images/rayo.png);
+  background-image: url(../../assets/images/rayo.png);
   align-items: flex-end;
   --tw-border-opacity: 1;
   border-color: rgb(253 186 116 / var(--tw-border-opacity));
@@ -741,7 +741,7 @@ header .highlights .highlight.counTasksMedium {
 }
 
 header .highlights .highlight.counTasksHigh {
-  background-image: url(../assets/images/fuego.png);
+  background-image: url(../../assets/images/fuego.png);
   align-items: flex-end;
   --tw-border-opacity: 1;
   border-color: rgb(252 165 165 / var(--tw-border-opacity));
